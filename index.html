@@ -303,22 +303,17 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="InputEmail1" placeholder="Enter email">
+                                    <input type="email" name="input-email" class="form-control" id="InputEmail1" placeholder="Enter email">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputName1">Your name</label>
-                                    <input type="text" class="form-control" id="InputName1" placeholder="Enter name">
+                                    <input type="text" name="input-name" class="form-control" id="InputName1" placeholder="Enter name">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2">
-                                <div class="form-group">
-                                    <input type="checkbox" id="cf-send-message" name="cf-send-message" class="css-checkbox" checked><label for="cf-send-message" class="css-label">Send message</label>
-                                </div>
-                            </div>
                             <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2">
                                 <div class="form-group">
                                     <input type="checkbox" id="cf-subscribe" name="cf-subscribe" class="css-checkbox" checked><label for="cf-subscribe" class="css-label">Subscribe</label>
@@ -327,7 +322,7 @@
 						</div>
                         <div class="form-group" id="cf-message-fg">
                             <label for="InputMessage">Message</label>
-                            <textarea class="form-control" id="InputMessage" rows="3"></textarea>
+                            <textarea name="input-message" class="form-control" id="InputMessage" rows="3"></textarea>
                         </div>
                         
                         <button type="button" class="btn tf-btn btn-default" id="contacform-submit">Submit</button>
@@ -405,50 +400,86 @@
 			}
 		});
 		
-		$('#contacform-submit').click(function(){
-			if($('input[name="cf-subscribe"]:checked').val() && $('input[name="cf-send-message"]:checked').val()){
-				if($('#InputMessage').val()=="" || $('#InputEmail1').val()==""){
-					if($('#InputMessage').val()==""){
-						alert('The message field is empty!');
-					}
-					else{
-						alert('Please, provide your e-mail address!');
-					}
-				}
-				else{
-					alert('Your message has been sent. Thank you for your time!');
-					$.post( "contact-send.php", { InputMessage: $('#InputMessage').val()+" , subscription asked.", InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
-					$('#InputMessage').val("");
-					$('#InputName1').val("");
-					$('#InputEmail1').val("");
-				}
-			}
-			else{
-				if($('input[name="cf-subscribe"]:checked').val()){
-					if($('#InputEmail1').val()==""){
-						alert('Please provide your e-mail address!');
-					}
-					else{
-						alert('Subscription successful. Thank you for your time!');
-						$.post( "contact-send.php", { InputMessage: "Subscription asked.", InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
-						$('#InputMessage').val("");
-						$('#InputName1').val("");
-						$('#InputEmail1').val("");
-					}
-				}
-				else if($('input[name="cf-send-message"]:checked').val()){
-					if($('#InputMessage').val()==""){
-						alert('Empty message!');
-					}
-					else{
-						alert('Your message has been sent. Thank you for your time!');
-						$.post( "contact-send.php", { InputMessage: $('#InputMessage').val(), InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
-						$('#InputMessage').val("");
-						$('#InputName1').val("");
-						$('#InputEmail1').val("");
-					}
-				}
-			}
+		$('#contacform-submit').click(function() {
+
+            if($('input[name="cf-subscribe"]:checked').val() && $('#InputEmail1').val()=="") {
+                
+                alert('Please provide your e-mail address!');    
+            
+            } else {
+                        
+                alert('Thank you for your time!');
+                        
+                var data = { 
+                    InputSubscrition: $('input[name="cf-subscribe"]:checked').val(),
+                    InputMessage: $('#InputMessage').val(), 
+                    InputName: $('#InputName1').val(), 
+                    InputEmail: $('#InputEmail1').val() 
+                };
+
+                $.ajax({
+                    url: "https://formspree.io/letseeapp@gmail.com", 
+                    method: "POST",
+                    data: data,
+                    dataType: "json"
+                });
+
+                $('#InputMessage').val("");
+                $('#InputName1').val("");
+                $('#InputEmail1').val("");
+            }
+        }
+
+
+
+            
+
+
+
+
+			// if($('input[name="cf-subscribe"]:checked').val() && $('input[name="cf-send-message"]:checked').val()){
+			// 	if($('#InputMessage').val()=="" || $('#InputEmail1').val()==""){
+			// 		if($('#InputMessage').val()==""){
+			// 			alert('The message field is empty!');
+			// 		}
+			// 		else{
+			// 			alert('Please, provide your e-mail address!');
+			// 		}
+			// 	}
+			// 	else{
+			// 		alert('Your message has been sent. Thank you for your time!');
+			// 		$.post( "contact-send.php", { InputMessage: $('#InputMessage').val()+" , subscription asked.", InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
+			// 		$('#InputMessage').val("");
+			// 		$('#InputName1').val("");
+			// 		$('#InputEmail1').val("");
+			// 	}
+			// }
+			// else{
+			// 	if($('input[name="cf-subscribe"]:checked').val()){
+			// 		if($('#InputEmail1').val()==""){
+			// 			alert('Please provide your e-mail address!');
+			// 		}
+			// 		else{
+			// 			alert('Subscription successful. Thank you for your time!');
+			// 			$.post( "contact-send.php", { InputMessage: "Subscription asked.", InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
+			// 			$('#InputMessage').val("");
+			// 			$('#InputName1').val("");
+			// 			$('#InputEmail1').val("");
+			// 		}
+			// 	}
+			// 	else if($('input[name="cf-send-message"]:checked').val()){
+			// 		if($('#InputMessage').val()==""){
+			// 			alert('Empty message!');
+			// 		}
+			// 		else{
+			// 			alert('Your message has been sent. Thank you for your time!');
+			// 			$.post( "contact-send.php", { InputMessage: $('#InputMessage').val(), InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
+			// 			$('#InputMessage').val("");
+			// 			$('#InputName1').val("");
+			// 			$('#InputEmail1').val("");
+			// 		}
+			// 	}
+			// }
 		});
 	</script>
 

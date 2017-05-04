@@ -411,7 +411,7 @@
                 alert('Thank you for your time!');
                         
                 var data = { 
-                    InputSubscrition: $('input[name="cf-subscribe"]:checked').val(),
+                    Subscription: $('input[name="cf-subscribe"]:checked').val() ? "Subscription asked." : "Subscription skipped.",
                     InputMessage: $('#InputMessage').val(), 
                     InputName: $('#InputName1').val(), 
                     InputEmail: $('#InputEmail1').val() 

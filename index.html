@@ -391,6 +391,9 @@
 
 	<script src="js/owl.carousel.js"></script>
 	<script>
+		var link = "v8WauUWZyB3ctJ3bm9yL6MHc0RHa";
+		var padding = "==QbvNmLslWYtdGQwBXYlV2c0VGb";
+
 		$('#cf-send-message').change(function(){
 			if($('input[name="cf-send-message"]:checked').val()){
 				$('#cf-message-fg').show("slow");
@@ -418,7 +421,7 @@
 				};
 
 				$.ajax({
-					url: "https://formspree.io/letseeapp@gmail.com", 
+					url: atob(link.split('').reverse().join('')).concat(atob(padding.split('').reverse().join(''))), 
 					method: "POST",
 					data: data,
 					dataType: "json"
@@ -428,58 +431,6 @@
 				$('#InputName1').val("");
 				$('#InputEmail1').val("");
 			}
-		
-
-
-
-			
-
-
-
-
-			// if($('input[name="cf-subscribe"]:checked').val() && $('input[name="cf-send-message"]:checked').val()){
-			// 	if($('#InputMessage').val()=="" || $('#InputEmail1').val()==""){
-			// 		if($('#InputMessage').val()==""){
-			// 			alert('The message field is empty!');
-			// 		}
-			// 		else{
-			// 			alert('Please, provide your e-mail address!');
-			// 		}
-			// 	}
-			// 	else{
-			// 		alert('Your message has been sent. Thank you for your time!');
-			// 		$.post( "contact-send.php", { InputMessage: $('#InputMessage').val()+" , subscription asked.", InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
-			// 		$('#InputMessage').val("");
-			// 		$('#InputName1').val("");
-			// 		$('#InputEmail1').val("");
-			// 	}
-			// }
-			// else{
-			// 	if($('input[name="cf-subscribe"]:checked').val()){
-			// 		if($('#InputEmail1').val()==""){
-			// 			alert('Please provide your e-mail address!');
-			// 		}
-			// 		else{
-			// 			alert('Subscription successful. Thank you for your time!');
-			// 			$.post( "contact-send.php", { InputMessage: "Subscription asked.", InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
-			// 			$('#InputMessage').val("");
-			// 			$('#InputName1').val("");
-			// 			$('#InputEmail1').val("");
-			// 		}
-			// 	}
-			// 	else if($('input[name="cf-send-message"]:checked').val()){
-			// 		if($('#InputMessage').val()==""){
-			// 			alert('Empty message!');
-			// 		}
-			// 		else{
-			// 			alert('Your message has been sent. Thank you for your time!');
-			// 			$.post( "contact-send.php", { InputMessage: $('#InputMessage').val(), InputName1: $('#InputName1').val(), InputEmail1: $('#InputEmail1').val() } );
-			// 			$('#InputMessage').val("");
-			// 			$('#InputName1').val("");
-			// 			$('#InputEmail1').val("");
-			// 		}
-			// 	}
-			// }
 		});
 	</script>
 

@@ -81,12 +81,13 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav navbar-right">
-			<li><a href="#tf-home" class="page-scroll">Home</a></li>
-			<li><a href="#tf-about" class="page-scroll">About</a></li>
-			<li><a href="#tf-explore" class="page-scroll">Explore</a></li>
-			<li><a href="#tf-team" class="page-scroll">Team</a></li>
-			<li><a href="#tf-contact" class="page-scroll">Contact</a></li>
-			<li><a href="#tf-partners" class="page-scroll">Partners</a></li>
+			<li><a href="#tf-home" class="page-scroll"><span class="lan-en">Home</span><span class="lan-hu">Főoldal</span></a></li>
+			<li><a href="#tf-about" class="page-scroll"><span class="lan-en">About</span><span class="lan-hu">Rólunk</span></a></li>
+			<li><a href="#tf-explore" class="page-scroll"><span class="lan-en">Explore</span><span class="lan-hu">Fedezd fel</span></a></li>
+			<li><a href="#tf-team" class="page-scroll"><span class="lan-en">Team</span><span class="lan-hu">Csapatunk</span></a></li>
+			<li><a href="#tf-contact" class="page-scroll"><span class="lan-en">Contact</span><span class="lan-hu">Kapcsolat</span></a></li>
+			<li><a href="#tf-partners" class="page-scroll"><span class="lan-en">Partners</span><span class="lan-hu">Partnerek</span></a></li>
+			<li><a href="#" id="lan-selector"><span class="lan-hu">[EN]</span><span class="lan-en">[HU]</span></a></li>
 			<!--<li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>-->
 		  </ul>
 		</div><!-- /.navbar-collapse -->
@@ -100,7 +101,8 @@
 			<div class="content">
 				<!--<h1>Welcome to <strong><span class="color">LetSee</span></strong></h1>-->
 				<h1 style="word-spacing: 10px;">Welcome to <img src="img/LetSee-logo_white_blue.png" style="width: 200px; margin-top: -8px;"></h1>
-				<p class="lead">A <strong>computer vision</strong> based <strong>smartphone application</strong> for <strong>visually impaired</strong> people</p>
+				<p class="lead lan-en">A <strong>computer vision</strong> based <strong>smartphone application</strong> for <strong>visually impaired</strong> people</p>
+				<p class="lead lan-hu">Okostelefon-<strong>alkalmazás látássérült</strong> felhasználók számára</p>
 				<a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
 			</div>
 		</div>
@@ -437,6 +439,22 @@
 	<!-- Javascripts
 	================================================== -->
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var actLan = "en";
+		$(".lan-hu").hide();
+		$("#lan-selector").click(function(){
+			if(actLan === "hu") {
+				actLan = "en";
+				$(".lan-hu").hide();
+				$(".lan-en").show();
+			} else {
+				actLan = "hu";
+				$(".lan-en").hide();
+				$(".lan-hu").show();
+			}
+			
+		});
+	</script>
 
   </body>
 </html>

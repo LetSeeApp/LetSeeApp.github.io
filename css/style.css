@@ -694,10 +694,20 @@ nav#footer p{
 		padding-left: 15px;
 		float: left;
 	}
+	
+	.col-1-6{
+		width: 16%;
+		display: inline-block;
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+	}
 }
 
 @media screen and (max-width: 992px) {
-	.col-1-5{
+	.col-1-5, .col-1-6{
 		width: 100%;
 		display: inline-block;
 		position: relative;

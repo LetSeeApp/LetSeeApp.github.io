@@ -27,6 +27,15 @@ h4{
 	text-transform: uppercase;
 }
 
+h3.news-title {
+	text-align: left;
+}
+
+h5 {
+	text-align: left;
+	padding-top: 25px;
+}
+
 .futureTask{
 	opacity: 0.5;
 }

@@ -700,6 +700,16 @@ nav#footer p{
 }
 
 @media screen and (min-width: 992px) {
+	.col-1-4 {
+		width: 25%;
+		display: inline-block;
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+	}
+
 	.col-1-5{
 		width: 20%;
 		display: inline-block;
@@ -722,7 +732,7 @@ nav#footer p{
 }
 
 @media screen and (max-width: 992px) {
-	.col-1-5, .col-1-6{
+	.col-1-4, .col-1-5, .col-1-6{
 		width: 100%;
 		display: inline-block;
 		position: relative;

@@ -1,0 +1,155 @@
+msgid "navigation.home"
+msgstr "Főoldal"
+
+msgid "navigation.about"
+msgstr "Az appról"
+
+msgid "navigation.explore"
+msgstr "Ismertető"
+
+msgid "navigation.news"
+msgstr "Hírek"
+
+msgid "navigation.team"
+msgstr "Csapatunk"
+
+msgid "navigation.contact"
+msgstr "Kapcsolat"
+
+msgid "navigation.partners"
+msgstr "Partnereink"
+
+msgid "header.title" 
+msgstr "Üdvözlünk a &img_src(img/LetSee-logo_white_blue.png) oldalán!"
+
+msgid "header.subtitle" 
+msgstr "Okostelefon-<strong>alkalmazás látássérült</strong> felhasználók számára"
+
+msgid "about.title"
+msgstr "LetSee: segít a látásban"
+
+msgid "about.content.p1"
+msgstr "Célunk egy olyan alkalmazás fejlesztése, amely a látássérülteket segíti életkörülményeik javításában. A LetSee egy egyszerűen használható alkalmazás, amely segítséget nyújt a mindennapokban felmerülő nehézségek megoldásához. Segítségével a látássérült illetve vak felhasználó hasznos információkat, hangjelzéseket kaphat a környezetéről. A jelenlegi verzió a papírpénzek felismerésére mellett használható bankkártyák és igazolványok betanítására és felismerésére, valamint egy fényintenzitás mérő funkció is megtalálható benne. A LetSee eszköztárát folyamatosan bővítjük, hogy minél hasznosabb segédeszközzé tegyük."
+
+msgid "about.content.p2"
+msgstr "A LetSee számtalan lehetőséget kínál felhasználóinak. Folyamatosan dolgozunk az alkalmazás fejlesztésén, új funkciók bevezetésén, többek között, hogy képes legyen színek illetve piktogramok felismerésére, digitális kijelzők leolvasására, járatszám-felismerésre, gyalogosátkelők megtalálására stb. Ha kipróbáltad, és kérdésed, visszajelzésed, fejlesztési ötleted van, kérünk írj nekünk az info@letseeapp.com emailcímre."
+
+msgid "donwload.title"
+msgstr "Letöltés"
+
+msgid "donwload.content.p1"
+msgstr "Izgatottan várjuk, mit szólsz hozzá! Töltsd le, próbáld ki! :)"
+
+msgid "explore.title"
+msgstr "Fedezd fel a <strong>LetSee</strong> világát!"
+
+msgid "explore.content.p1"
+msgstr "A LetSee sokoldalúan használja ki az okostelefonok számítási teljesítményét és a bennük lévő szenzorokat."
+
+msgid "explore.content.col1.title"
+msgstr "<strong>Bemeneti képek</strong>"
+
+msgid "explore.content.col1.description"
+msgstr "A LetSee a telefon kameráját használja, folyamatosan feldolgozva a környezetből kinyerhető képi információkat."
+
+msgid "explore.content.col2.title"
+msgstr "<strong>Hatékony képfeldolgozás</strong>"
+
+msgid "explore.content.col2.description"
+msgstr "A telefon gyors és hatékony algoritmusok segítségével dolgozza fel a képeket, így nincs szükség internetkapcsolatra az alkalmazás használatához."
+
+msgid "explore.content.col3.title"
+msgstr "<strong>Hangjelzések</strong>"
+
+msgid "explore.content.col3.description"
+msgstr "Amint az alkalmazás sikeresen feldolgozta a képet, az eredmény azonnal megjelenik a kijelzőn, és hallhatóvá válik a hangszórón vagy fülhallgatón keresztül."
+
+msgid "explore.content.col4.title"
+msgstr "<strong>Feladatválasztás</strong>"
+
+msgid "explore.content.col4.description"
+msgstr "A funkciók között egyszerű oldalirányú söpréssel lehet váltani."
+
+msgid "news.title"
+msgstr "Hírek"
+
+msgid "news.subtitle"
+msgstr "TalkBack és gesztusvezérlés"
+
+msgid "news.content.p1"
+msgstr "A <i>TalkBack</i> módosítja a beépített gesztusokat, így az alkalmazás használata során ismertetett gesztusok eltérhetnek, az aktuálisan használt <i>TalkBack</i> verziójától függően. Ilyen jellegű hiba esetén segíthet, ha a <i>Kisegítő lehetőségek</i> billentyűparancs használatával átmenetileg kikapcsoljuk a <i>TalkBacket</i> a felhasználói élmény javítása érdekében. (Az iOS rendszeren automatikusan letiltjuk a <i>VoiceOvert</i> azon funkciókra, ahol az zavaró lenne a működés során.)"
+
+msgid "team.title"
+msgstr "Ismerd meg <strong>munkatársainkat!</strong>"
+
+msgid "team.member1.name"
+msgstr "Egervári Csanád"
+
+msgid "team.member1.post"
+msgstr "Ügyvezető"
+
+msgid "team.member2.name"
+msgstr "Karacs Viktor"
+
+msgid "team.member2.post"
+msgstr "Üzletfejlesztési menedzser"
+
+msgid "team.member3.name"
+msgstr "Stubendek Attila"
+
+msgid "team.member3.post"
+msgstr "Algoritmus-fejlesztő"
+
+msgid "team.member4.name"
+msgstr "Quintz Gábor"
+
+msgid "team.member4.post"
+msgstr "iOS fejlesztő"
+
+msgid "team.member5.name"
+msgstr "Kertész Tibor"
+
+msgid "team.member5.post"
+msgstr "Mobil App fejlesztő"
+
+msgid "team.member6.name"
+msgstr "Karacs Kristóf"
+
+msgid "team.member6.post"
+msgstr "Fejlesztési vezető"
+
+msgid "contact.title"
+msgstr "<strong>Elérhetőség</strong> / <strong>feliratkozás</strong>"
+
+msgid "contact.content.p1"
+msgstr "Írj nekünk! - ha bármi kérdésed vagy megjegyzésed van"
+
+msgid "contact.content.p2"	
+msgstr "Iratkozz fel! - ha szeretnél elsőként értesülni a frissítésekről"
+
+msgid "contact.content.form.email.label"
+msgstr "E-mail cím"
+
+msgid "contact.content.form.email.placeholder"
+msgstr ""
+
+msgid "contact.content.form.name.label"
+msgstr "Név"
+
+msgid "contact.content.form.name.placeholder"
+msgstr ""
+
+msgid "contact.content.form.subscribe.label"
+msgstr "Feliratkozás"
+
+msgid "contact.content.form.message.label"
+msgstr "Üzenet"
+
+msgid "contact.content.form.submit.label"
+msgstr "Elküld"
+
+msgid "partners.title"
+msgstr "Partnereink"
+
+msgid "footer.privacy"
+msgstr ""

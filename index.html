@@ -383,18 +383,16 @@
 				<div class="col-md-8 col-md-offset-2">
 
 					<div class="section-title center">
-						<h2 class="lan-en"><strong>Contact</strong> / <strong>subscribe</strong></h2>
-						<h2 class="lan-hu"><strong>Elérhetőség</strong> / <strong>feliratkozás</strong></h2>
+						<h2 class="lan-en"><strong>Contact</strong></h2>
+						<h2 class="lan-hu"><strong>Elérhetőség</strong></h2>
 						<div class="line">
 							<hr>
 						</div>
 						<div class="clearfix"></div>
 						<span class="lan-en">
 						<em>Contact us! - in case you have any questions or comments</em><br>
-						<em>Subscribe! - if you would like to get notification when the app is ready to fly</em></span>
 						<span class="lan-hu">
 						<em>Írj nekünk! - ha bármi kérdésed vagy megjegyzésed van</em><br>
-						<em>Iratkozz fel! - ha szeretnél elsőként értesülni a frissítésekről</em></span>
 					</div>
 
 					<form>
@@ -412,13 +410,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2">
-								<div class="form-group">
-									<input type="checkbox" id="cf-subscribe" name="cf-subscribe" class="css-checkbox" checked><label for="cf-subscribe" class="css-label"><span class="lan-en">Subscribe</span><span class="lan-hu">Feliratkozás</span></label>
-								</div>
-							</div>
-						</div>
+						
 						<div class="form-group" id="cf-message-fg">
 							<label for="InputMessage"><span class="lan-en">Message</span><span class="lan-hu">Üzenet</span></label>
 							<textarea name="input-message" class="form-control" id="InputMessage" rows="3"></textarea>
@@ -509,18 +501,12 @@
 		
 		$('#contacform-submit').click(function() {
 
-			if($('input[name="cf-subscribe"]:checked').val() && $('#InputEmail1').val()=="") {
-				
-				alert('Please provide your e-mail address!');    
-			
-			} else {
-						
 				alert('Thank you for your time!');
 						
 				var data = { 
 					Name: $('#InputName1').val(), 
 					Email: $('#InputEmail1').val(),
-					Subscription: $('input[name="cf-subscribe"]:checked').val() ? "Subscription asked." : "Subscription skipped.",
+					Subscription: "Subscription skipped.",
 					Message: $('#InputMessage').val()
 				};
 
@@ -534,7 +520,7 @@
 				$('#InputMessage').val("");
 				$('#InputName1').val("");
 				$('#InputEmail1').val("");
-			}
+			
 		});
 	</script>
 

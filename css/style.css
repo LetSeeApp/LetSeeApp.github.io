@@ -730,6 +730,18 @@ nav#footer p{
 		float: left;
 	}
 
+	.col-1-6b{
+		width: 16%;
+		display: inline;
+		position: relative;
+		overflow: auto;
+		min-height: 1px;
+		padding-right: 0;
+		padding-left: 0;
+		float: left;
+		/*float: inherit;*/
+	}
+
 	.col-1-7{
 		width: 14%;
 		display: inline-block;

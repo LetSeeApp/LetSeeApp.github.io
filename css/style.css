@@ -729,10 +729,32 @@ nav#footer p{
 		padding-left: 15px;
 		float: left;
 	}
+
+	.col-1-6b{
+		width: 19%;
+		display: inline;
+		position: relative;
+		overflow: auto;
+		min-height: 1px;
+		padding-right: 5px;
+		padding-left: 5px;
+		margin-inline: 10px;
+		float: inherit;
+	}
+
+	.col-1-7{
+		width: 14%;
+		display: inline-block;
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+	}
 }
 
 @media screen and (max-width: 992px) {
-	.col-1-4, .col-1-5, .col-1-6{
+	.col-1-4, .col-1-5, .col-1-6, .col-1-7{
 		width: 100%;
 		display: inline-block;
 		position: relative;

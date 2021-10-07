@@ -603,50 +603,32 @@
 		});
 	</script>
 
-  <script>
-	  /*$("#bs-example-navbar-collapse-1").keyup(function(event) {
-		  var elementExists = document.getElementById("#tf-news");
-		  if (event.keyCode === 13 && elementExists) {
-			  //alert(document.activeElement);
-			  $("#section-title center medra").focus();
-			  //alert(document.activeElement);
-		  }
-	  });*/
-
-	  //var ul = document.getElementById('#bs-example-navbar-collapse-1');  // Parent
-
-	  $("#bs-example-navbar-collapse-1").keyup(function(event) {
-	  //document.querySelector('#bs-example-navbar-collapse-1').addEventListener('keypress', function (event) {
-		  // $("#bs-example-navbar-collapse-1").addEventListener('keypress', function (event) {
-
-		  	//if (event.keyCode === "Enter") {
-		  //var activeNavBarElementId = document.activeElement.id
-		  //var focusedSectionTitleElementId
-
-		  if (event.keyCode === 13 || event.keyCode === 'Enter') {
-			  switch (document.activeElement.id) {
-				  case '#tf-news': document.getElementById('media_appr').focus();
-					  break;
-				  default:
-			  }
-		  }
-
-		  /*var elementFocused;
-		  	if (event.keyCode === 13) {
-				  if (document.activeElement.id === '#tf-news') {
-					  //alert(event.target.id);  // Check if the element is a LI
-					  //$("#section-title center medra").focus();
-					  elementFocused = document.getElementById('media_appr');
-					  //$("#section-title center medra").setAttribute('tabindex', '0');
-					  elementFocused.focus();
-					  elementFocused.setAttribute('tabindex', '0');
-				  } else {
-					  alert(document.activeElement);
-				  }
-			  }*/
-
-	  });
-  </script>
+	<!-- JS function to fix the accessibility focus on keyboard navigation -->
+  	<script>
+		// On an key pressed event performed over the navigation bar element with id:
+		// `#bs-example-navbar-collapse-1` (the parent element)
+		$("#bs-example-navbar-collapse-1").keyup(function(event) { // Using jQuery for handling the event
+			// If the key pressed event is the 'Enter' key (key code number 13)
+			if (event.keyCode === 13 || event.key === 'Enter') {
+				switch (document.activeElement.id) { // Change the focus to the corresponding section title element
+					case 'navbar-home': document.getElementById('section-title-home').focus();
+						break;
+					case 'navbar-about': document.getElementById('section-title-about').focus();
+					  	break;
+					case 'navbar-explore': document.getElementById('section-title-explore').focus();
+					  	break;
+					case 'navbar-news': document.getElementById('section-title-news').focus();
+					  	break;
+					case 'navbar-team': document.getElementById('section-title-team').focus();
+					  	break;
+					case 'navbar-contact': document.getElementById('section-title-contact').focus();
+					  	break;
+					case 'navbar-partners': document.getElementById('section-title-partners').focus();
+					  	break;
+				}
+			}
+		  });
+	  </script>
 
   </body>
 </html>

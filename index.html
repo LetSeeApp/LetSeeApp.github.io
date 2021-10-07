@@ -78,13 +78,14 @@
 		  <!-- <a class="navbar-brand" href="index.html">LetSee</a> -->
 		</div>
 
+		  <!-- Collect the nav links, forms, and other content for toggling -->
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav navbar-right">
 			<li><a href="#tf-home" class="page-scroll"><span class="lan-en">Home</span><span class="lan-hu">Főoldal</span></a></li>
 			<li><a href="#tf-about" class="page-scroll"><span class="lan-en">About</span><span class="lan-hu">Az appról</span></a></li>
 			<li><a href="#tf-explore" class="page-scroll"><span class="lan-en">Explore</span><span class="lan-hu">Ismertető</span></a></li>
-			<li><a href="#tf-news" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
+			<li><a id="#tf-news" href="#tf-news" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
 			<li><a href="#tf-team" class="page-scroll"><span class="lan-en">Team</span><span class="lan-hu">Csapatunk</span></a></li>
 			<li><a href="#tf-contact" class="page-scroll"><span class="lan-en">Contact</span><span class="lan-hu">Kapcsolat</span></a></li>
 			<li><a href="#tf-partners" class="page-scroll"><span class="lan-en">Partners</span><span class="lan-hu">Partnereink</span></a></li>
@@ -236,7 +237,7 @@
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
 
-						<div class="section-title center">
+						<div class="section-title center" id="media_appr" tabindex="0">
 							<h2 class="lan-en">Media appearances</h2>
 							<h2 class="lan-hu">Média megjelenések</h2>
 							<div class="line">
@@ -600,6 +601,51 @@
 			event.preventDefault();
 		});
 	</script>
+
+  <script>
+	  /*$("#bs-example-navbar-collapse-1").keyup(function(event) {
+		  var elementExists = document.getElementById("#tf-news");
+		  if (event.keyCode === 13 && elementExists) {
+			  //alert(document.activeElement);
+			  $("#section-title center medra").focus();
+			  //alert(document.activeElement);
+		  }
+	  });*/
+
+	  //var ul = document.getElementById('#bs-example-navbar-collapse-1');  // Parent
+
+	  $("#bs-example-navbar-collapse-1").keyup(function(event) {
+	  //document.querySelector('#bs-example-navbar-collapse-1').addEventListener('keypress', function (event) {
+		  // $("#bs-example-navbar-collapse-1").addEventListener('keypress', function (event) {
+
+		  	//if (event.keyCode === "Enter") {
+		  //var activeNavBarElementId = document.activeElement.id
+		  //var focusedSectionTitleElementId
+
+		  if (event.keyCode === 13 || event.keyCode === 'Enter') {
+			  switch (document.activeElement.id) {
+				  case '#tf-news': document.getElementById('media_appr').focus();
+					  break;
+				  default:
+			  }
+		  }
+
+		  /*var elementFocused;
+		  	if (event.keyCode === 13) {
+				  if (document.activeElement.id === '#tf-news') {
+					  //alert(event.target.id);  // Check if the element is a LI
+					  //$("#section-title center medra").focus();
+					  elementFocused = document.getElementById('media_appr');
+					  //$("#section-title center medra").setAttribute('tabindex', '0');
+					  elementFocused.focus();
+					  elementFocused.setAttribute('tabindex', '0');
+				  } else {
+					  alert(document.activeElement);
+				  }
+			  }*/
+
+	  });
+  </script>
 
   </body>
 </html>

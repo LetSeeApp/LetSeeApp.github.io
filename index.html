@@ -605,15 +605,13 @@
 
 	<!-- JS function to fix the accessibility focus on keyboard navigation -->
   	<script>
-		// On an key pressed event performed over the navigation bar `div` element with id:
-		// `#bs-example-navbar-collapse-1` (the parent element)
+		// On an key pressed event performed over the navigation bar `nav` element with id:
+		// `tf-menu` (the parent element)
 		// Approach 1: Using jQuery for handling the event
-		//$("#bs-example-navbar-collapse-1").keyup(function(event) {
-		//$("#tf-menu").keyup(function(event) {
-		// Approach 2: Using vanilla JavaScript,
-		// replace the navbar `div` element with the `ul` element `navbar-sections` (the parent list element)
-		document.getElementById("tf-menu").addEventListener("keyup", function (event) {
-			event.preventDefault(); // Approach 2: Using vanilla JavaScript
+		$("#tf-menu").keyup(function(event) {
+		// Approach 2: Using vanilla JavaScript for handling the event
+		// document.getElementById("tf-menu").addEventListener("keyup", function (event) {
+			// event.preventDefault(); // Approach 2: Using vanilla JavaScript
 			// If the key pressed event is the 'Enter' key (key code number 13)
 			if (event.key === '13' || event.key === 'Enter') {
 				switch (document.activeElement.id) { // Change the focus to the corresponding section title element

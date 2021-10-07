@@ -68,29 +68,29 @@
 	  <div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a aria-hidden="true" href="#tf-home" class="page-scroll"><img src="img/LetSee-logo_white_blue.png" class="navbar-brand"></a>
-		  <!-- <a class="navbar-brand" href="index.html">LetSee</a> -->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a aria-hidden="true" id="navbar-logo" href="#tf-home" class="page-scroll"><img src="img/LetSee-logo_white_blue.png" class="navbar-brand"></a>
+		  	<!-- <a class="navbar-brand" href="index.html">LetSee</a> -->
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav navbar-right" id="navbar-sections">
-			<li><a id="navbar-home" href="#tf-home" class="page-scroll"><span class="lan-en">Home</span><span class="lan-hu">Főoldal</span></a></li>
-			<li><a id="navbar-about" href="#tf-about" class="page-scroll"><span class="lan-en">About</span><span class="lan-hu">Az appról</span></a></li>
-			<li><a id="navbar-explore" href="#tf-explore" class="page-scroll"><span class="lan-en">Explore</span><span class="lan-hu">Ismertető</span></a></li>
-			<li><a id="navbar-news" href="#tf-news" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
-			<li><a id="navbar-team" href="#tf-team" class="page-scroll"><span class="lan-en">Team</span><span class="lan-hu">Csapatunk</span></a></li>
-			<li><a id="navbar-contact" href="#tf-contact" class="page-scroll"><span class="lan-en">Contact</span><span class="lan-hu">Kapcsolat</span></a></li>
-			<li><a id="navbar-partners" href="#tf-partners" class="page-scroll"><span class="lan-en">Partners</span><span class="lan-hu">Partnereink</span></a></li>
-			<li><a id="lan-selector" href="#"><span class="lan-hu">[EN]</span><span class="lan-en">[HU]</span></a></li>
-			<!--<li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>-->
-		  </ul>
+			<ul class="nav navbar-nav navbar-right" id="navbar-sections">
+				<li><a id="navbar-home" href="#tf-home" class="page-scroll"><span class="lan-en">Home</span><span class="lan-hu">Főoldal</span></a></li>
+				<li><a id="navbar-about" href="#tf-about" class="page-scroll"><span class="lan-en">About</span><span class="lan-hu">Az appról</span></a></li>
+				<li><a id="navbar-explore" href="#tf-explore" class="page-scroll"><span class="lan-en">Explore</span><span class="lan-hu">Ismertető</span></a></li>
+				<li><a id="navbar-news" href="#tf-news" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
+				<li><a id="navbar-team" href="#tf-team" class="page-scroll"><span class="lan-en">Team</span><span class="lan-hu">Csapatunk</span></a></li>
+				<li><a id="navbar-contact" href="#tf-contact" class="page-scroll"><span class="lan-en">Contact</span><span class="lan-hu">Kapcsolat</span></a></li>
+				<li><a id="navbar-partners" href="#tf-partners" class="page-scroll"><span class="lan-en">Partners</span><span class="lan-hu">Partnereink</span></a></li>
+				<li><a id="lan-selector" href="#"><span class="lan-hu">[EN]</span><span class="lan-en">[HU]</span></a></li>
+				<!--<li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>-->
+		  	</ul>
 		</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
@@ -608,14 +608,17 @@
 		// On an key pressed event performed over the navigation bar `div` element with id:
 		// `#bs-example-navbar-collapse-1` (the parent element)
 		// Approach 1: Using jQuery for handling the event
-		$("#bs-example-navbar-collapse-1").keyup(function(event) {
+		//$("#bs-example-navbar-collapse-1").keyup(function(event) {
+		//$("#tf-menu").keyup(function(event) {
 		// Approach 2: Using vanilla JavaScript,
 		// replace the navbar `div` element with the `ul` element `navbar-sections` (the parent list element)
-		// document.getElementById("navbar-sections").addEventListener("keyup", function (event) {
-			// event.preventDefault(); // Approach 2: Using vanilla JavaScript
+		document.getElementById("tf-menu").addEventListener("keyup", function (event) {
+			event.preventDefault(); // Approach 2: Using vanilla JavaScript
 			// If the key pressed event is the 'Enter' key (key code number 13)
 			if (event.key === '13' || event.key === 'Enter') {
 				switch (document.activeElement.id) { // Change the focus to the corresponding section title element
+					case 'navbar-logo': document.getElementById('section-title-home').focus();
+						break;
 					case 'navbar-home': document.getElementById('section-title-home').focus();
 						break;
 					case 'navbar-about': document.getElementById('section-title-about').focus();

@@ -1,967 +1,968 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-	<!-- Basic Page Needs
-	================================================== -->
-	<meta charset="utf-8">
-	<!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>LetSee - A computer vision based smartphone application for visually impaired people</title>
-   <meta name="description" content="A computer vision based smartphone application for visually impaired people">
-   <meta name="keywords" content="computer vision, smartphone application, app, visually impaired, blind, aid">
-   <meta name="author" content="ThemeForces.com, Hungarian Bionic Vision Center">
+	<head>
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8">
+		<!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>LetSee - A computer vision based smartphone application for visually impaired people</title>
+		<meta name="description" content="A computer vision based smartphone application for visually impaired people">
+		<meta name="keywords" content="computer vision, smartphone application, app, visually impaired, blind, aid">
+		<meta name="author" content="ThemeForces.com, Hungarian Bionic Vision Center">
 
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/icons/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/icons/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/icons/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/icons/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="img/icons/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="img/icons/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="img/icons/favicon-128.png" sizes="128x128" />
-	<meta name="application-name" content="LetSee - A computer vision based smartphone application for visually impaired people"/>
-	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="img/icons/mstile-144x144.png" />
-	<meta name="msapplication-square70x70logo" content="img/icons/mstile-70x70.png" />
-	<meta name="msapplication-square150x150logo" content="img/icons/mstile-150x150.png" />
-	<meta name="msapplication-wide310x150logo" content="img/icons/mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="img/icons/mstile-310x310.png" />
+		<!--Favicons
+		================================================== -->
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/icons/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/icons/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/icons/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/icons/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="img/icons/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="img/icons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="img/icons/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="img/icons/favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="LetSee - A computer vision based smartphone application for visually impaired people"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="img/icons/mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="img/icons/mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="img/icons/mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="img/icons/mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="img/icons/mstile-310x310.png" />
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.6.1/css/font-awesome.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.6.1/css/font-awesome.css">
 
-	<!-- Slider
-	================================================== -->
-	<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-	<link href="css/owl.theme.css" rel="stylesheet" media="screen">
+		<!-- Slider
+		================================================== -->
+		<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+		<link href="css/owl.theme.css" rel="stylesheet" media="screen">
 
-	<!-- Stylesheet
-	================================================== -->
-	<link rel="stylesheet" type="text/css"  href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+		<!-- Stylesheet
+		================================================== -->
+		<link rel="stylesheet" type="text/css"  href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 
-	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.js"></script>
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-  </head>
-  <body>
-	<!-- Navigation
-	==========================================-->
-	<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a aria-hidden="true" id="navbar-logo" href="#tf-home" class="page-scroll"><img src="img/LetSee-logo_white_blue.png" class="navbar-brand"></a>
-    <!-- <a class="navbar-brand" href="index.html">LetSee</a> -->
-  </div>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-   <ul class="nav navbar-nav navbar-right" id="navbar-sections">
-    <li><a id="navbar-home" href="#tf-home" class="page-scroll"><span class="lan-en">Home</span><span class="lan-hu">Főoldal</span></a></li>
-    <li><a id="navbar-about" href="#tf-about" class="page-scroll"><span class="lan-en">About</span><span class="lan-hu">Az appról</span></a></li>
-    <li><a id="navbar-explore" href="#tf-explore" class="page-scroll"><span class="lan-en">Explore</span><span class="lan-hu">Ismertető</span></a></li>
-    <li><a id="navbar-videos" href="#tf-videos" class="page-scroll"><span class="lan-en">Videos</span><span class="lan-hu">Videók</span></a></li>
-    <li><a id="navbar-news" href="#tf-news" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
-    <li><a id="navbar-team" href="#tf-team" class="page-scroll"><span class="lan-en">Team</span><span class="lan-hu">Csapatunk</span></a></li>
-    <li><a id="navbar-contact" href="#tf-contact" class="page-scroll"><span class="lan-en">Contact</span><span class="lan-hu">Kapcsolat</span></a></li>
-    <li><a id="navbar-partners" href="#tf-partners" class="page-scroll"><span class="lan-en">Partners</span><span class="lan-hu">Partnereink</span></a></li>
-    <li><a id="lan-selector" href="#"><span class="lan-hu">[EN]</span><span class="lan-en">[HU]</span></a></li>
-    <!--<li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>-->
-  </ul>
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
+	<body>
+		<!-- Navigation
+		==========================================-->
+		<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a aria-hidden="true" id="navbar-logo" href="#tf-home" class="page-scroll"><img src="img/LetSee-logo_white_blue.png" class="navbar-brand"></a>
+					<!-- <a class="navbar-brand" href="index.html">LetSee</a> -->
+				</div>
 
-	<!-- Home Page
-	==========================================-->
-	<div role="main" id="mainPage">
-		<div id="tf-home" class="text-center">
-			<div class="overlay">
-				<div class="content">
-					<!--<h1>Welcome to <strong><span class="color">LetSee</span></strong></h1>-->
-					<div class="section-title" id="section-title-home" tabindex="0">
-						<h1 aria-hidden="true" class="lan-en" style="word-spacing: 10px;">Welcome to <img src="img/LetSee-logo_white_blue.png" style="width: 200px; margin-top: -8px;" alt="LetSee"></h1>
-						<h1 class="lan-hu" style="word-spacing: 10px;">Üdvözlünk a <img src="img/LetSee-logo_white_blue.png" style="width: 200px; margin-top: -8px;" alt="Let See"> oldalán!</h1>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right" id="navbar-sections">
+						<li><a id="navbar-home" href="#tf-home" class="page-scroll"><span class="lan-en">Home</span><span class="lan-hu">Főoldal</span></a></li>
+						<li><a id="navbar-about" href="#tf-about" class="page-scroll"><span class="lan-en">About</span><span class="lan-hu">Az appról</span></a></li>
+						<li><a id="navbar-explore" href="#tf-explore" class="page-scroll"><span class="lan-en">Explore</span><span class="lan-hu">Ismertető</span></a></li>
+						<li><a id="navbar-videos" href="#tf-videos" class="page-scroll"><span class="lan-en">Videos</span><span class="lan-hu">Videók</span></a></li>
+						<li><a id="navbar-news" href="#tf-news" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
+						<li><a id="navbar-team" href="#tf-team" class="page-scroll"><span class="lan-en">Team</span><span class="lan-hu">Csapatunk</span></a></li>
+						<li><a id="navbar-contact" href="#tf-contact" class="page-scroll"><span class="lan-en">Contact</span><span class="lan-hu">Kapcsolat</span></a></li>
+						<li><a id="navbar-partners" href="#tf-partners" class="page-scroll"><span class="lan-en">Partners</span><span class="lan-hu">Partnereink</span></a></li>
+						<li><a id="lan-selector" href="#"><span class="lan-hu">[EN]</span><span class="lan-en">[HU]</span></a></li>
+						<!--<li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>-->
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+		<!-- Home Page
+		==========================================-->
+		<div role="main" id="mainPage">
+			<div id="tf-home" class="text-center">
+				<div class="overlay">
+					<div class="content">
+						<!--<h1>Welcome to <strong><span class="color">LetSee</span></strong></h1>-->
+						<div class="section-title" id="section-title-home" tabindex="0">
+							<h1 aria-hidden="true" class="lan-en" style="word-spacing: 10px;">Welcome to <img src="img/LetSee-logo_white_blue.png" style="width: 200px; margin-top: -8px;" alt="LetSee"></h1>
+							<h1 class="lan-hu" style="word-spacing: 10px;">Üdvözlünk a <img src="img/LetSee-logo_white_blue.png" style="width: 200px; margin-top: -8px;" alt="Let See"> oldalán!</h1>
+						</div>
+						<p class="lead lan-en">A <strong>computer vision</strong> based <strong>smartphone application</strong> for <strong>visually impaired</strong> people</p>
+						<p class="lead lan-hu">Okostelefon-<strong>alkalmazás látássérült</strong> felhasználók számára</p>
+						<a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
 					</div>
-					<p class="lead lan-en">A <strong>computer vision</strong> based <strong>smartphone application</strong> for <strong>visually impaired</strong> people</p>
-					<p class="lead lan-hu">Okostelefon-<strong>alkalmazás látássérült</strong> felhasználók számára</p>
-					<a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
 				</div>
 			</div>
-		</div>
 
-		<!-- About Us Page
-		==========================================-->
-		<div id="tf-about">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<img src="img/LetSeeAppInUse02.jpg" class="img-responsive" alt="Let see logo">
-						<div class="clearfix"></div>
-						<br /><br />
-						<iframe align="middle" style="width: 576px; height: 324px; max-width: 100%; max-height: 60%;" src="https://www.youtube.com/embed/pslJZNljpvE" frameborder="0" gesture="media" allowfullscreen></iframe>
-					</div>
-					<div class="col-md-6">
-						<div class="about-text">
-							<div class="section-title" id="section-title-about" tabindex="0">
-               <!-- <h4>About us</h4> -->
-               <h2 class="lan-en">LetSee: an App for Vision</h2>
-               <h2 class="lan-hu">LetSee: segít a látásban</h2>
-               <hr>
-               <div class="clearfix"></div>
-             </div>
-             <p class="intro justified lan-en">Our aim is to develop an application to help visually impaired people. LetSee is an easy-to-use app to facilitate their lives, and help them to solve common recognition challenges. LetSee enables blind users to gain visual information by providing audio feedback. In addition to recognizing paper money, the current version it can be used to train and recognize your own plastic cards, and it also has a light intensity meter. We are continuously extending the LetSee toolbox to make it more useful.</p>
-             <p class="intro justified lan-hu">Célunk egy olyan alkalmazás fejlesztése, amely a látássérülteket segíti életkörülményeik javításában. A LetSee egy egyszerűen használható alkalmazás, amely segítséget nyújt a mindennapokban felmerülő nehézségek megoldásához. Segítségével a látássérült illetve vak felhasználó hasznos információkat, hangjelzéseket kaphat a környezetéről. A jelenlegi verzió a papírpénzek felismerésére mellett használható bankkártyák és igazolványok betanítására és felismerésére, valamint egy fényintenzitás mérő funkció is megtalálható benne. A LetSee eszköztárát folyamatosan bővítjük, hogy minél hasznosabb segédeszközzé tegyük.</p>
-             <p class="intro justified lan-en">LetSee provides endless possibilities to its users. We are constantly working on improving our services and introducing more features, like making it able to identify colors, recognize pictographs, read small displays on household appliances, recognize numbers of public transport vehicles, locate crosswalks, etc. If you have any questions, feedback or feature request, please email us at<a href="mailto:info@letseeapp.com" title="Send an email to LetSee"> info@letseeapp.com </a></p>
-             <p class="intro justified lan-hu">A LetSee számtalan lehetőséget kínál felhasználóinak. Folyamatosan dolgozunk az alkalmazás fejlesztésén, új funkciók bevezetésén, többek között, hogy képes legyen színek illetve piktogramok felismerésére, digitális kijelzők leolvasására, járatszám-felismerésre, gyalogosátkelők megtalálására stb. Ha kipróbáltad, és kérdésed, visszajelzésed, fejlesztési ötleted van, kérünk írj nekünk az <a href="mailto:info@letseeapp.com" title="Küldjön e-mailt a LetSee">info@letseeapp.com</a> emailcímre. </p>
-           </div>
-
-           <br /><br />
-
-           <div class="section-title">
-             <h2 class="lan-en">Download <strong>LetSee</strong></h2>
-             <h2 class="lan-hu">Letöltés</h2>
-             <div class="line">
-              <hr>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-          <p class="intro lan-en">We are really excited to show you how it works! Download LetSee! :)</p>
-          <p class="intro lan-hu">Izgatottan várjuk, mit szólsz hozzá! Töltsd le, próbáld ki! :)</p>
-          <div class="section-title center">
-           <a href="https://itunes.apple.com/hu/app/letseeapp/id1170643143?mt=8">
-            <img alt="Beszerzés az App store-ból" src="img/AppStoreDownload_HU.svg" class="img-rounded lan-hu" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
-            <img alt="Get it on App Store" src="img/AppStoreDownload_US-UK.svg" class="img-rounded lan-en" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
-          </a>
-          <a href='https://play.google.com/store/apps/details?id=com.letseeapp.letseeapp&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-            <img alt="Beszerzés a Google Play-ből" src="img/PlayStoreDownload_HU.png" class="img-rounded lan-hu" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
-            <img alt="Get it on Google Play" src="img/PlayStoreDownload_US-UK.png" class="img-rounded lan-en" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-		 <!-- Explore Section
-		==========================================-->
-   <div id="tf-explore" class="text-center">
-     <div class="overlay">
-      <div class="container">
-       <div class="section-title center" id="section-title-explore" tabindex="0">
-        <h2 class="lan-en">Explore <strong>the app</strong></h2>
-        <h2 class="lan-hu">Fedezd fel a <strong>LetSee</strong> világát!</h2>
-        <div class="line">
-         <hr>
-       </div>
-       <div class="clearfix"></div>
-       <div class="center-block visible-sm visible-md visible-lg">
-         <img aria-hidden="true" src="img/DataFlow01W.png" class="img-rounded" align="middle" style="width: 80%; max-width: 600px;">
-       </div>
-       <div class="center-block visible-xs">
-         <img aria-hidden="true" src="img/DataFlow02W.png" class="img-rounded" align="middle" style="width: 60%; max-width: 200px;">
-       </div>
-       <!-- There should be two types for PC and mobile versions. Or not? --><!--is equipped only with banknote recognition capabilies-->
-						<!--<p class="intro">LetSee app uses the built in camera of your smartphone to capture imageflows of your surroundings. Images are processed locally in real time, thus no internet connection is needed to use the app.* Since current version of LetSee recognizes banknotes only, task selection menu will be introduced in a later release. Just tap on the app to start processing and wait for the audio feedback. Once the app is highly confident in its decisions, results are immediately displayed on the screen and spoken out loud. </p>
-						<p class="intro">To help you aim the device properly, LetSee also gives you audio hints about where to move the camera.</p>
-       -->
-       <p class="intro lan-en">LetSee is exploiting the immense computational and sensory capabilities of smartphones.</p>
-       <p class="intro lan-hu">A LetSee sokoldalúan használja ki az okostelefonok számítási teljesítményét és a bennük lévő szenzorokat.</p>
-     </div>
-     <div class="space"></div>
-     <div class="row">
-
-      <div class="col-md-3 col-sm-6 service">
-       <i class="fa fa-video-camera"></i>
-       <h4 class="lan-en"><strong>Image Acquisition</strong></h4>
-       <h4 class="lan-hu"><strong>Bemeneti képek</strong></h4>
-       <p class="justified lan-en">LetSee uses the built in camera of your smartphone to look around in your surroundings processing each frame continuously. </p>
-       <p class="justified lan-hu">A LetSee a telefon kameráját használja, folyamatosan feldolgozva a környezetből kinyerhető képi információkat.</p>
-     </div>
-
-     <div class="col-md-3 col-sm-6 service">
-       <i class="fa fa-mobile"></i>
-       <h4 class="lan-en"><strong>Effective Processing</strong></h4>
-       <h4 class="lan-hu"><strong>Hatékony képfeldolgozás</strong></h4>
-       <p class="justified lan-en">Fast and low-power algorithms running locally on your phone, thus no data connection is needed to use the app.</p>
-       <p class="justified lan-hu">A telefon gyors és hatékony algoritmusok segítségével dolgozza fel a képeket, így nincs szükség internetkapcsolatra az alkalmazás használatához.</p>
-     </div>
-
-     <div class="col-md-3 col-sm-6 service">
-       <i class="fa fa-bullhorn"></i>
-       <h4 class="lan-en"><strong>Audio Feedback</strong></h4>
-       <h4 class="lan-hu"><strong>Hangjelzések</strong></h4>
-       <p class="justified lan-en">Once the app is highly confident in its decisions, results are immediately displayed on the screen and spoken out loud.</p>
-       <p class="justified lan-hu">Amint az alkalmazás sikeresen feldolgozta a képet, az eredmény azonnal megjelenik a kijelzőn, és hallhatóvá válik a hangszórón vagy fülhallgatón keresztül.</p>
-     </div>
-     <div class="col-md-3 col-sm-6 service">
-       <i class="fa fa-th-list"></i>
-       <h4 class="lan-en"><strong>Task Selection</strong></h4>
-       <h4 class="lan-hu"><strong>Feladatválasztás</strong></h4>
-       <p class="justified lan-en">Simply swipe sideways to choose among functions.</p>
-       <p class="justified lan-hu">A funkciók között egyszerű oldalirányú söpréssel lehet váltani.</p>
-     </div>
-   </div>
- </div>
-</div>
-</div>
-
-
-		<!--Videos Section
-		==========================================-->
-		<div id="tf-news" class="text-center">
-      <div class="container">
-
-       <div class="row">
-         <div class="col-md-10 col-md-offset-1">
-          <div class="section-title center" id="section-title-news" tabindex="0">
-            <h2 class="lan-en text-center">Technology demonstration videos</h2>
-            <h2 class="lan-hu text-center">Technológia bemutató videók</h2>
-            <div class="line">
-             <hr>
-           </div>
-           <div class="clearfix"></div>
-          </div>
-          </div>
-        </div>
-        <div class="row"><div class="col-md-12"><hr></div></div>
-        <div class="row">
-        <div class="col-md-6">
-          <iframe align="middle" style="width: 576px; height: 324px; max-width: 100%; max-height: 60%;" src="https://www.youtube.com/embed/_nKTGo410j0" frameborder="0" gesture="media" allowfullscreen></iframe>
-        </div>
-        <div class="col-md-6">
-          <iframe align="middle" style="width: 576px; height: 324px; max-width: 100%; max-height: 60%;" src="https://www.youtube.com/embed/9Y_S-QLQhrY" frameborder="0" gesture="media" allowfullscreen></iframe>
-        </div>
-        </div>
-      </div>
-    </div>
-
-		<!-- News Section
-		==========================================-->
-		
-		<div id="tf-news" class="text-center">
-      <div class="container">
-
-       <div class="row">
-         <div class="col-md-10 col-md-offset-1">
-          <div class="section-title center" id="section-title-news" tabindex="0">
-            <h2 class="lan-en">Media appearances & Resources</h2>
-            <h2 class="lan-hu">Média megjelenések és Információk</h2>
-            <div class="line">
-             <hr>
-           </div>
-           <div class="clearfix"></div>
-         </div>
-       </div>
-     </div>
-			<!-- <div class="row">
-			
-			<div class="col-md-12">
-				<h5 class="lan-en">Videos showcasing LetSee App features</h5>
-				<h5 class="lan-hu">A LetSee App funkcióit bemutató videók</h5>
-				
-				<p class="intro justified lan-en">
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=SKtf6zBaPmE">Short demo of the banknote recognizer on the phone</a><br>
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=bMmVhpwVa">Short demo of the color recognizer on the phone</a><br>
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=EcfzB9i2I90">Short demo of the 3D, indoor scene understanding</a>
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=YpkPGnlyEJ4">LetSee,an app to help the visually impaired</a> (in Hungarian)
-				</p>
-				
-				<p class="intro justified lan-hu">
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=SKtf6zBaPmE">Bankjegyfelismerő funkció bemutatása, a telefonon</a><br>
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=bMmVhpwVa">Színfelismerő funkció bemutatása, a telefonon</a><br>
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=EcfzB9i2I90">3D beltéri jelenet értés bemutatása</a>
-				<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=YpkPGnlyEJ4">LetSee látássegítő applikáció</a>
-				</p>
-			</div>
-
-			<div class="col-md-12">
-				<h5 class="lan-en">Download links & Features</h5>
-				<h5 class="lan-hu">Applikáció letöltési linkek és funkciók</h5>
-
-				<p class="intro justified lan-en">
-				<strong>Download:</strong> 
-				<a href="https://play.google.com/store/apps/details?id=com.letseeapp.letseeapp&hl=hu">Google Play</a> <span>&#124;</span> 
-				<a href="https://apps.apple.com/by/app/letseeapp/id1170643143">App Store</a><br><br>
-				<strong>Features available in the downloadable app:</strong> banknote recognition (HUF, EUR, USD free), card recognition (free for up to 5 cards), and a brightness meter.
-				</p>
-
-				<p class="intro justified lan-hu">
-				<strong>Letöltés:</strong> 
-				<a href="https://play.google.com/store/apps/details?id=com.letseeapp.letseeapp&hl=hu">Google Play</a> <span>&#124;</span> 
-				<a href="https://apps.apple.com/by/app/letseeapp/id1170643143">App Store</a><br><br>
-				<strong>A letölthető applikációban elérhető funkciók:</strong> bankjegyfelismerés (HUF, EUR, USD ingyenes), kártyafelismerés (5 kártyáig ingyenes), fényerősség mérő.
-				</p>
-			</div>
-
-			</div>
-     -->
-
-     <div class="row"><div class="col-md-12"><hr></div></div>
-     <div class="row">
-
-       <div class="col-md-12">
-        <h5 class="lan-en">One Digital Award</h5>
-        <h5 class="lan-hu">One Digitális Díj</h5>
-        <p class="intro justified lan-en">
-          December 15, 2025 <span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/masodik-helyezest-ert-el-a-letsee-app-a-one-digitalis-dijon">The LetSee App won second place at the ONE Digital Award! </a> (in Hungarian) <br>
-          December 15, 2025 <span>&#8226;</span> <a href="https://onealapitvany.hu/programok/digitalis-dij">Digital Award </a> (in Hungarian)
-        </p>
-        <p class="intro justified lan-hu">
-          2025. december 15. <span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/masodik-helyezest-ert-el-a-letsee-app-a-one-digitalis-dijon">Második helyezést ért el a LetSee App a ONE Digitális Díjon!</a> <br>
-          2025. december 15. <span>&#8226;</span> <a href="https://onealapitvany.hu/programok/digitalis-dij">Digitális Díj</a>
-
-        </p>
-      </div>
-
-
-      <div class="col-md-12">
-        <h5 class="lan-en">Hobby Radio (LESEK conference)</h5>
-        <h5 class="lan-hu">Hobby Rádió (LESEK konferencia)</h5>
-
-        <p class="intro justified lan-en">
-         November 15, 2025 <span>&#8226;</span>
-         <a href="https://fecni.backbone.itk.ppke.hu/s/yk6T6WXzwTQiRM9">
-         Interview about the LetSee App </a>(in Hungarian)
-
-         <br>
-         November 15, 2025 <span>&#8226;</span>
-         <a href="https://fecni.backbone.itk.ppke.hu/s/4iYdTCTePfDDxTJ">
-         Demonstration of features (color recognizer, doorbell, finding empty seats) </a>(in Hungarian)
-
-       </p>
-
-       <p class="intro justified lan-hu">
-         2025. november 15. <span>&#8226;</span>
-         <a href="https://fecni.backbone.itk.ppke.hu/s/yk6T6WXzwTQiRM9">
-           Általános interjú a LetSee App-ról
-         </a>
-         <br>
-         2025. november 15. <span>&#8226;</span>
-         <a href="https://fecni.backbone.itk.ppke.hu/s/4iYdTCTePfDDxTJ">
-           Funkciók bemutatása (színfelismerő, kapucsengő, üres ülőhelyek keresése)
-         </a>
-       </p>
-     </div>
-
-     <div class="col-md-12">
-      <h5 class="lan-en">M1 "Esély"</h5>
-      <h5 class="lan-hu">M1 Esély</h5>
-      <p class="intro justified lan-en">April 19, 2025 <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/xGZrLCDwgArMKRj">LetSee App: mobil-phone based vision for the visually impaired</a> (in Hungarian)</p>
-      <p class="intro justified lan-hu">2025. április 19. <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/xGZrLCDwgArMKRj">Bemutatkozik a LetSee App: gépi látás a látássérültekért</a></p>
-    </div>
-
-    <div class="col-md-12">
-      <h5 class="lan-en"> Innoteka </h5>
-      <h5 class="lan-hu">Innotéka</h5>
-      <p class="intro justified lan-en">
-        December 4, 2024 <span>&#8226;</span> <a href="https://www.innoteka.hu/cikk/bionika_az_ember_szolgalataban_mernoki_megoldasok_biologiai_es_orvosi_tapasztalatokra_alapozva.3086.html"> Bionics in the Service of Humanity – Engineering Solutions Based on Biological and Medical Experience</a> (in Hungarian) </p>
-        <p class="intro justified lan-hu">
-          2024. december 04. <span>&#8226;</span> <a href="https://www.innoteka.hu/cikk/bionika_az_ember_szolgalataban_mernoki_megoldasok_biologiai_es_orvosi_tapasztalatokra_alapozva.3086.html">Bionika az ember szolgálatában – mérnöki megoldások biológiai és orvosi tapasztalatokra alapozva</a></p>
-        </div>
-
-        <div class="col-md-12">
-          <h5 class="lan-en">TOP100 Media: TOP100 Artifial Intelligence Innovation (2025)</h5>
-          <h5 class="lan-hu">TOP100 Media: TOP100 Mesterséges Intelligencia Innováció (2025)</h5>
-          <p class="intro justified lan-en">
-            <span>&#8226;</span> <a href="https://top-100.hu/100-magyar-mesterseges-intelligencia-innovacio/">TOP 100 Hungarian AI Innovation</a> (in Hungarian)</p>
-            <p class="intro justified lan-hu">
-              <span>&#8226;</span> <a href="https://top-100.hu/100-magyar-mesterseges-intelligencia-innovacio/">TOP 100 Magyar Mesterséges Intelligencia Innováció</a></p>
-            </div>
-
-
-            <div class="col-md-12">
-              <h5 class="lan-en">Cybathlon 2024</h5>
-              <h5 class="lan-hu">Cybathlon 2024</h5>
-              <p class="intro justified lan-en">
-                <span>&#8226;</span> <a href="https://cybathlon.com/en/cybathlon-2024/results?event=5267&discipline=5154">Cybathlon 2024: Results</a><br>
-                <span>&#8226;</span> <a href="https://itk.ppke.hu/en/about-us-253/cybathlon-2024">PPKE ITK: Outstanding Achievements at CYBATHLON</a><br>
-                <span>&#8226;</span> <a href="https://www.magyarkurir.hu/hirek/pazmanyos-gyozelem-fogyatekkal-elok-eletminosegenek-javitasat-celzo-nemzetkozi-cybathlonon">Magyar Kurír: Pázmány victory at the international Cybathlon</a> (in Hungarian) <br>
-                <span>&#8226;</span> <a href="https://startuponline.hu/public/a-fogyatekkal-eloket-segito-megoldasokkal-nyertek-nemzetkozi-versenyt-magyarok">Hungarians won an international competition with solutions that assist people with disabilities</a> (in Hungarian) <br>
-                <span>&#8226;</span> <a href="https://medicalonline.hu/tudomany/cikk/magyar_csapat_nyert_a_svajci_cybathlon_versenyen">Magyar csapat nyert a svájci CYBATHLON versenyen</a> (in Hungarian) <br>
-                <span>&#8226;</span> <a href="https://bdpst24.hu/2024/11/11/a-pazmany-peter-katolikus-egyetem-eyerider-csapata-nyerte-a-latassegito-eszkozoket-fejlesztok-nemzetkozi-versenyet/">The EyeRider team of Pázmány Péter Katolikus Egyetem won the international competition for developers of vision-assisting devices</a> (in Hungarian) <br>
-                <span>&#8226;</span> <a href="https://medicalonline.hu/tudomany/cikk/magyar_csapat_nyert_a_svajci_cybathlon_versenyen">A Hungarian team won the Swiss CYBATHLON competition</a> (in Hungarian) <br>
-                <span>&#8226;</span> <a href="https://hirek.prim.hu/cikk/159195">Hungarian success at the international competition for developers of vision-assisting devices </a> (in Hungarian) <br>
-                <span>&#8226;</span> <a href="https://www.inf.elte.hu/magyar-siker-nemzetkozi-versenyen">Hungarian success at an international competition </a> (in Hungarian) <br>
-                <span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/kimagaslo-eredmenyek-a-cybathlon-on">Success of PPKE ITK on Cybathlon</a> (in Hungarian)
-
-              </p>
-              <p class="intro justified lan-hu">
-                <span>&#8226;</span> <a href="https://cybathlon.com/en/cybathlon-2024/results?event=5267&discipline=5154">Cybathlon 2024: Eredmények</a> (angolul) <br>
-                <span>&#8226;</span> <a href="https://itk.ppke.hu/en/about-us-253/cybathlon-2024">PPKE ITK beszámoló: Cybathlon 2024</a> (angolul) <br>
-                <span>&#8226;</span> <a href="https://www.magyarkurir.hu/hirek/pazmanyos-gyozelem-fogyatekkal-elok-eletminosegenek-javitasat-celzo-nemzetkozi-cybathlonon">Magyar Kurír: Pázmányos győzelem a nemzetközi Cybathlonon</a> <br>
-                <span>&#8226;</span> <a href="https://startuponline.hu/public/a-fogyatekkal-eloket-segito-megoldasokkal-nyertek-nemzetkozi-versenyt-magyarok">A fogyatékkal élőket segítő megoldásokkal nyertek nemzetközi versenyt magyarok</a> <br>
-                <span>&#8226;</span> <a href="https://bdpst24.hu/2024/11/11/a-pazmany-peter-katolikus-egyetem-eyerider-csapata-nyerte-a-latassegito-eszkozoket-fejlesztok-nemzetkozi-versenyet/">A Pázmány Péter Katolikus Egyetem EyeRider csapata nyerte a látássegítő eszközöket fejlesztők nemzetközi versenyét</a> <br>
-                <span>&#8226;</span> <a href="https://medicalonline.hu/tudomany/cikk/magyar_csapat_nyert_a_svajci_cybathlon_versenyen"> Magyar csapat nyert a svájci CYBATHLON versenyen</a> <br>
-                <span>&#8226;</span> <a href="https://hirek.prim.hu/cikk/159195">Magyar siker a látássegítő eszközöket fejlesztők nemzetközi versenyén</a> <br>
-                <span>&#8226;</span> <a href="https://www.inf.elte.hu/magyar-siker-nemzetkozi-versenyen">Magyar siker nemzetközi versenyen</a> <br>
-                <span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/kimagaslo-eredmenyek-a-cybathlon-on">ITK-s sikerek a Cybathlon-on</a> 
-
-              </p>
-            </div>
-
-
-
-            <div class="col-md-12">
-              <h5 class="lan-en">Blikk</h5>
-              <h5 class="lan-hu">Blikk</h5>
-              <p class="intro justified lan-en">
-                November 22, 2024 <span>&#8226;</span> <a href="https://www.blikk.hu/ferfiaknak/tech/cybathlon-magyarok-letseeapp/90kmmgs">Hungarians introduce an everyday application designed for the blind </a> (in Hungarian)
-              </p>
-              <p class="intro justified lan-hu">
-                2024. november  22. <span>&#8226;</span> <a href="https://www.blikk.hu/ferfiaknak/tech/cybathlon-magyarok-letseeapp/90kmmgs">Vakoknak készült hétköznapi alkalmazással magyarok a világ előtt</a>
-              </p>
-            </div>
-
-
-            <div class="col-md-12">
-              <h5 class="lan-en">Rehab Portál</h5>
-              <h5 class="lan-hu">Rehab Portál</h5>
-              <p class="intro justified lan-en">
-                August 24, 2024 <span>&#8226;</span> <a href="https://rehabportal.hu/hogyan-segithet-a-mesterseges-intelligencia-a-latasserult-embereknek/">How can Artificial Intelligence help blind people? </a> (in Hungarian)
-              </p>
-              <p class="intro justified lan-hu">
-                2024. augusztus  24. <span>&#8226;</span> <a href="https://rehabportal.hu/hogyan-segithet-a-mesterseges-intelligencia-a-latasserult-embereknek/">Hogyan segíthet a mesterséges intelligencia a látássérült embereknek?</a>
-              </p>
-            </div>
-
-            <div class="col-md-12">
-              <h5 class="lan-en">Cybathlon Introduction Video</h5>
-              <h5 class="lan-hu">Cybathlon Bemutatkozó Videó</h5>
-              <p class="intro justified lan-en">2024 <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/z4PDjMBMBepY3iX">About us for Cybathlon</a> </p>
-              <p class="intro justified lan-hu">2024. <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/z4PDjMBMBepY3iX">Rólunk - Cybathlon bemutatkozás</a> (angolul)</p>
-            </div>		
-
-          </div>
-
-          <div class="row">
-
-           <div class="col-md-12">
-            <h5 class="lan-en">Hungarian Federation of the Blind and Partially Sighted</h5>
-            <h5 class="lan-hu">Magyar Vakok és Gyengénlátók Országos Szövetsége</h5>
-            <p class="intro justified lan-en">February 4, 2022 <span>&#8226;</span> <a href="https://www.mvgyosz.hu/hirek-hu/lezarult-a-tavszem-letseeapp-kerdoives-kutatas/">The questionare based researh has been concluded (Távszem-LetSeeApp)</a> (in Hungarian)</p>
-            <p class="intro justified lan-hu">2022. február 4. <span>&#8226;</span> <a href="https://www.mvgyosz.hu/hirek-hu/lezarult-a-tavszem-letseeapp-kerdoives-kutatas/">Lezárult a Távszem-Letseeapp kérdőíves kutatás</a></p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">Radio Hobby</h5>
-            <h5 class="lan-hu">Hobby rádió</h5>
-
-            <p class="intro justified lan-en">
-              January 14, 2022 <span>&#8226;</span> 
-              <a href="http://gephaz.hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-beszelgettunk/">
-              Interview in Radio Hobby</a> (in Hungarian) 
-              <span>&#8226;</span> 
-              <a href="http://gephaz.hobbyradio.hu/archiv/22_01_14.mp3">mp3</a> <br>
-              January 15, 2022 <span>&#8226;</span> 
-              <a href="https://hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-a-gephazban/">
-              About the future plans of LetSeeApp and MVGYOSZ in GÉPHÁZ</a> (in Hungarian)
-            </p>
-
-            <p class="intro justified lan-hu">
-              2022. január 14. <span>&#8226;</span> 
-              <a href="http://gephaz.hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-beszelgettunk/">
-              Interjú a Hobby rádióban</a> 
-              <span>&#8226;</span> 
-              <a href="http://gephaz.hobbyradio.hu/archiv/22_01_14.mp3">mp3</a> <br>
-              2022. január 15. <span>&#8226;</span> 
-              <a href="https://hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-a-gephazban/">
-              A LetSeeApp és az MVGYOSZ jövőbeni terveiről GÉPHÁZ-ban</a>
-
-            </p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">Hungarian Federation of the Blind and Partially Sighted</h5>
-            <h5 class="lan-hu">Magyar Vakok és Gyengénlátók Országos Szövetsége</h5>
-            <p class="intro justified lan-en">January 5, 2022 <span>&#8226;</span> <a href="https://www.mvgyosz.hu/kiemelt-hirek-esemenyek/felhivas-a-tavszem-es-letseeapp-felhasznalok-reszere/">Announcement for Távszem and Letseeapp users</a> (in Hungarian)</p>
-            <p class="intro justified lan-hu">2022. január 5. <span>&#8226;</span> <a href="https://www.mvgyosz.hu/kiemelt-hirek-esemenyek/felhivas-a-tavszem-es-letseeapp-felhasznalok-reszere/">Felhívás a Távszem és Letseeapp felhasználók részére</a></p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">vision High-Tech</h5>
-            <h5 class="lan-hu">vision High-Tech</h5>
-            <p class="intro justified lan-en">December 9, 2021 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=O-6ZflOcwgI">LetseeApp iOS Android: accessible application for blind and visually impaired people top application</a> (in French)</p>
-            <p class="intro justified lan-hu">2021. december 9. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=O-6ZflOcwgI">LetseeApp iOS-re és Android-ra: Kiváló alkalmazás vak és gyengénlátók számára</a> (franciául)</p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">PsychoVan (by Vanessa)</h5>
-            <h5 class="lan-hu">PsychoVan (Vanessa)</h5>
-            <p class="intro justified lan-en">2020 <span>&#8226;</span> <a href="https://psicovan.es/aplicaciones-accesibles/discapacidad-visual/740-letseeapp-reconoce-tus-billetes-con-la-camara-del-movil">LetSeeApp recognizes your banknotes with the mobile camera</a> (in Spanish)</p>
-            <p class="intro justified lan-hu">2020. <span>&#8226;</span> <a href="https://psicovan.es/aplicaciones-accesibles/discapacidad-visual/740-letseeapp-reconoce-tus-billetes-con-la-camara-del-movil">A LetSeeApp felismeri a bankjegyeit a mobil kamerával</a> (spanyolul)</p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">vision High-Tech</h5>
-            <h5 class="lan-hu">vision High-Tech</h5>
-            <p class="intro justified lan-en">June 19, 2020 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=Wo8NycagyMA">LetSeeApp Compatible iOS iPhone Android This Application Detects Light Tickets For Free!</a> (in French)</p>
-            <p class="intro justified lan-hu">2020. június 19. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=Wo8NycagyMA">Egy újabb látássegítő alkalmazás látássérülteknek</a> (franciául)</p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">Androidphoria (by Peter Reyes)</h5>
-            <h5 class="lan-hu">Androidphoria (Peter Reyes)</h5>
-            <p class="intro justified lan-en">June 12, 2020 <span>&#8226;</span> <a href="https://androidphoria.com/aplicaciones/letseeapp">LetSeeApp helps you identify banknotes with your mobile</a> (in Spanish)</p>
-            <p class="intro justified lan-hu">2020. június 12. <span>&#8226;</span> <a href="https://androidphoria.com/aplicaciones/letseeapp">A LetSeeApp a mobiltelefonja kamerájával segít a bankjegyek felismerésében</a> (spanyolul)</p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">smartja.no</h5>
-            <h5 class="lan-hu">smartja.no</h5>
-            <p class="intro justified lan-en">May 20, 2020 <span>&#8226;</span> <a href="https://www.smartja.no/letseeapp/">Another visual aid app for the visually impaired</a> - short description (in Norwegian)</p>
-            <p class="intro justified lan-hu">2020. május 20. <span>&#8226;</span> <a href="https://www.smartja.no/letseeapp/">Egy újabb látássegítő alkalmazás látássérülteknek</a> - rövid ismertető (norvégul)</p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">Prasad Tech Vision</h5>
-            <h5 class="lan-hu">Prasad Tech Vision</h5>
-            <p class="intro justified lan-en">January 13, 2020 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=H_AXtLrV4uM">How to check dark mode and light mode blind and visually impaired very useful for100 percent blind</a> (in Hindi)</p>
-            <p class="intro justified lan-hu">2020. január 13. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=H_AXtLrV4uM">Fénymérő alkalmazás vakok részére</a> (hindiül)</p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">Radio Hobby</h5>
-            <h5 class="lan-hu">Hobby rádió</h5>
-            <p class="intro justified lan-en">June 10, 2019 <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/ket-igen-hasznos-magyar-fejlesztesu-okostelefonos-appot-mustraltunk/">Interview in Radio Hobby</a> (in Hungarian) <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/archiv/19_06_07.mp3">mp3</a> </p>
-            <p class="intro justified lan-hu">2019. június 10. <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/ket-igen-hasznos-magyar-fejlesztesu-okostelefonos-appot-mustraltunk/">Interjú a Hobby rádióban</a> <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/archiv/19_06_07.mp3">mp3</a> </p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">Blind Coin Collector (Tom Babinszki)</h5>
-            <h5 class="lan-hu">Blind Coin Collector (Tom Babinszki)</h5>
-            <p class="intro justified lan-en">March 10, 2019 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=tIBPaJeN6u0">How blind people identify paper money</a></p>
-            <p class="intro justified lan-hu">2019. március 10. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=tIBPaJeN6u0">Így azonosítják a papírpénzeket a látássérültek</a> (angolul)</p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">efiportal.hu</h5>
-            <h5 class="lan-hu">efiportal.hu</h5>
-            <p class="intro justified lan-en">January 31, 2019 <span>&#8226;</span> <a href="http://www.efiportal.hu/hir/okostelefon-alkalmazas-latasserult-felhasznalok-szamara/">Smartphone application for visually impaired users</a> (in Hungarian)</p>
-            <p class="intro justified lan-hu">2019. január 31. <span>&#8226;</span> <a href="http://www.efiportal.hu/hir/okostelefon-alkalmazas-latasserult-felhasznalok-szamara/">Okostelefon-alkalmazás látássérült felhasználók számára</a></p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">mmonline.hu</h5>
-            <h5 class="lan-hu">mmonline.hu</h5>
-            <p class="intro justified lan-en">October 24, 2018 <span>&#8226;</span> <a href="https://mmonline.hu/cikk/magyar-app-segithet-a-latasserulteknek">Hungarian app can help the the blind and visually impaired</a> (in Hungarian)</p>
-            <p class="intro justified lan-hu">2018. október 24. <span>&#8226;</span> <a href="https://mmonline.hu/cikk/magyar-app-segithet-a-latasserulteknek/">Magyar app segíthet a látássérülteknek</a></p>
-          </div>
-
-          <div class="col-md-12">
-            <h5 class="lan-en">IT Foundation for the Visually Impaired</h5>
-            <h5 class="lan-hu">Informatika A Látássérültekért Alapítvány</h5>
-            <p class="intro justified lan-en">
-              July 06, 2017 <span>&#8226;</span> <a href="https://infoalap.hu/Uj-penzfelismero-alkalmazas-segiti-a-vak-embereket-7012/">A new money recognition application helps blind people </a> (in Hungarian)
-            </p>
-            <p class="intro justified lan-hu">
-              2017. július 06. <span>&#8226;</span> <a href="https://infoalap.hu/Uj-penzfelismero-alkalmazas-segiti-a-vak-embereket-7012/">Új pénzfelismerő alkalmazás segíti a vak embereket</a>
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-		<!-- Team Page
-		==========================================-->
-		<div id="tf-team" class="text-center">
-			<div class="overlay">
+			<!-- About Us Page
+			==========================================-->
+			<div id="tf-about">
 				<div class="container">
-					<div class="section-title center" id="section-title-team" tabindex="0">
-						<h2 class="lan-en">Meet <strong>our team</strong></h2>
-						<h2 class="lan-hu">Ismerd meg <strong>munkatársainkat!</strong></h2>
-						<div class="line">
-							<hr>
-						</div>
-					</div>
-
 					<div class="row">
-						<!-- Placeholder to move the 4 images to center -->
-						<div style="width:10%; min-height: 1px; float: left;">
+						<div class="col-md-6">
+							<img src="img/LetSeeAppInUse02.jpg" class="img-responsive" alt="Let see logo">
+							<div class="clearfix"></div>
+							<br /><br />
+							<iframe align="middle" style="width: 576px; height: 324px; max-width: 100%; max-height: 60%;" src="https://www.youtube.com/embed/pslJZNljpvE" frameborder="0" gesture="media" allowfullscreen></iframe>
 						</div>
-
-						<div class="col-1-4-squished">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/vk1.jpg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Viktor Karacs</h3>
-									<h3 class="lan-hu">Karacs Viktor</h3>
-									<p class="lan-en">Business development manager</p>
-									<p class="lan-hu">Üzletfejlesztési menedzser</p>
+						<div class="col-md-6">
+							<div class="about-text">
+								<div class="section-title" id="section-title-about" tabindex="0">
+									<!-- <h4>About us</h4> -->
+									<h2 class="lan-en">LetSee: an App for Vision</h2>
+									<h2 class="lan-hu">LetSee: segít a látásban</h2>
+									<hr>
+									<div class="clearfix"></div>
 								</div>
+								<p class="intro justified lan-en">Our aim is to develop an application to help visually impaired people. LetSee is an easy-to-use app to facilitate their lives, and help them to solve common recognition challenges. LetSee enables blind users to gain visual information by providing audio feedback. In addition to recognizing paper money, the current version it can be used to train and recognize your own plastic cards, and it also has a light intensity meter. We are continuously extending the LetSee toolbox to make it more useful.</p>
+								<p class="intro justified lan-hu">Célunk egy olyan alkalmazás fejlesztése, amely a látássérülteket segíti életkörülményeik javításában. A LetSee egy egyszerűen használható alkalmazás, amely segítséget nyújt a mindennapokban felmerülő nehézségek megoldásához. Segítségével a látássérült illetve vak felhasználó hasznos információkat, hangjelzéseket kaphat a környezetéről. A jelenlegi verzió a papírpénzek felismerésére mellett használható bankkártyák és igazolványok betanítására és felismerésére, valamint egy fényintenzitás mérő funkció is megtalálható benne. A LetSee eszköztárát folyamatosan bővítjük, hogy minél hasznosabb segédeszközzé tegyük.</p>
+								<p class="intro justified lan-en">LetSee provides endless possibilities to its users. We are constantly working on improving our services and introducing more features, like making it able to identify colors, recognize pictographs, read small displays on household appliances, recognize numbers of public transport vehicles, locate crosswalks, etc. If you have any questions, feedback or feature request, please email us at<a href="mailto:info@letseeapp.com" title="Send an email to LetSee"> info@letseeapp.com </a></p>
+								<p class="intro justified lan-hu">A LetSee számtalan lehetőséget kínál felhasználóinak. Folyamatosan dolgozunk az alkalmazás fejlesztésén, új funkciók bevezetésén, többek között, hogy képes legyen színek illetve piktogramok felismerésére, digitális kijelzők leolvasására, járatszám-felismerésre, gyalogosátkelők megtalálására stb. Ha kipróbáltad, és kérdésed, visszajelzésed, fejlesztési ötleted van, kérünk írj nekünk az <a href="mailto:info@letseeapp.com" title="Küldjön e-mailt a LetSee">info@letseeapp.com</a> emailcímre. </p>
+							</div>
+
+							<br /><br />
+
+							<div class="section-title">
+								<h2 class="lan-en">Download <strong>LetSee</strong></h2>
+								<h2 class="lan-hu">Letöltés</h2>
+								<div class="line">
+									<hr>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<p class="intro lan-en">We are really excited to show you how it works! Download LetSee! :)</p>
+							<p class="intro lan-hu">Izgatottan várjuk, mit szólsz hozzá! Töltsd le, próbáld ki! :)</p>
+							<div class="section-title center">
+								<a href="https://itunes.apple.com/hu/app/letseeapp/id1170643143?mt=8">
+									<img alt="Beszerzés az App store-ból" src="img/AppStoreDownload_HU.svg" class="img-rounded lan-hu" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
+									<img alt="Get it on App Store" src="img/AppStoreDownload_US-UK.svg" class="img-rounded lan-en" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
+								</a>
+								<a href='https://play.google.com/store/apps/details?id=com.letseeapp.letseeapp&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+									<img alt="Beszerzés a Google Play-ből" src="img/PlayStoreDownload_HU.png" class="img-rounded lan-hu" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
+									<img alt="Get it on Google Play" src="img/PlayStoreDownload_US-UK.png" class="img-rounded lan-en" align="middle" style="max-width: 230px; height: 60px; max-height: 60px;" />
+								</a>
 							</div>
 						</div>
-
-						<div class="col-1-4-squished">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/jmm1.jpg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Márton Jusztin</h3>
-									<h3 class="lan-hu">Jusztin Márton</h3>
-									<p class="lan-en">iOS Developer</p>
-									<p class="lan-hu">iOS fejlesztő</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-1-4-squished">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/gha1.jpg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Anna Gelencsér-Horváth</h3>
-									<h3 class="lan-hu">Gelencsér-Horváth Anna</h3>
-									<p class="lan-en">Research Developer</p>
-									<p class="lan-hu">Kutató-fejlesztő</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-1-4-squished">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/kk1.jpg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Kristof Karacs</h3>
-									<h3 class="lan-hu">Karacs Kristóf</h3>
-									<p class="lan-en">Head of Development</p>
-									<p class="lan-hu">Fejlesztési vezető</p>
-								</div>
-							</div>
-						</div>
-
 					</div>
-					<div class="row">
-
-						<div class="col-1-5">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/cse1.jpg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Csanad Egervari</h3>
-									<h3 class="lan-hu">Egervári Csanád</h3>
-									<p class="lan-en">Executive Manager</p>
-									<p class="lan-hu">Ügyvezető</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-1-5">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/jj1.jpg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Julian Jeronimo</h3>
-									<h3 class="lan-hu">Jeronimo Julian</h3>
-									<p class="lan-en">Android Developer</p>
-									<p class="lan-hu">Android fejlesztő</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-1-5">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/as1.jpg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Attila Stubendek</h3>
-									<h3 class="lan-hu">Stubendek Attila</h3>
-									<p class="lan-en">Algorithm Developer</p>
-									<p class="lan-hu">Algoritmus-fejlesztő</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-1-5">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/gq1.png" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Gabor Quintz</h3>
-									<h3 class="lan-hu">Quintz Gábor</h3>
-									<p class="lan-en">iOS Developer</p>
-									<p class="lan-hu">iOS fejlesztő</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-1-5">
-							<div class="thumbnail">
-								<img aria-hidden="true" src="img/team/kt.jpeg" class="img-circle team-img">
-								<div class="caption">
-									<h3 class="lan-en">Tibor Kertesz</h3>
-									<h3 class="lan-hu">Kertész Tibor</h3>
-									<p class="lan-en">Mobile App Developer</p>
-									<p class="lan-hu">Mobil App fejlesztő</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
 				</div>
 			</div>
-		</div>
 
-		<!-- Contact Section
-		==========================================-->
-		<div id="tf-contact" class="text-center">
-			<div class="container">
 
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-
-						<div class="section-title center" id="section-title-contact" tabindex="0">
-							<h2 class="lan-en"><strong>Contact</strong></h2>
-							<h2 class="lan-hu"><strong>Elérhetőség</strong></h2>
+			<!-- Explore Section
+			==========================================-->
+			<div id="tf-explore" class="text-center">
+				<div class="overlay">
+					<div class="container">
+						<div class="section-title center" id="section-title-explore" tabindex="0">
+							<h2 class="lan-en">Explore <strong>the app</strong></h2>
+							<h2 class="lan-hu">Fedezd fel a <strong>LetSee</strong> világát!</h2>
 							<div class="line">
 								<hr>
 							</div>
 							<div class="clearfix"></div>
-							<span class="lan-en">
-								<em>Contact us! - in case you have any questions or comments</em><br>
-							</span>
-							<span class="lan-hu">
-								<em>Írj nekünk! - ha bármi kérdésed vagy megjegyzésed van</em><br>
-							</span>
+							<div class="center-block visible-sm visible-md visible-lg">
+								<img aria-hidden="true" src="img/DataFlow01W.png" class="img-rounded" align="middle" style="width: 80%; max-width: 600px;">
+							</div>
+							<div class="center-block visible-xs">
+								<img aria-hidden="true" src="img/DataFlow02W.png" class="img-rounded" align="middle" style="width: 60%; max-width: 200px;">
+							</div>
+							<!-- There should be two types for PC and mobile versions. Or not? --><!--is equipped only with banknote recognition capabilies-->
+							<!--<p class="intro">LetSee app uses the built in camera of your smartphone to capture imageflows of your surroundings. Images are processed locally in real time, thus no internet connection is needed to use the app.* Since current version of LetSee recognizes banknotes only, task selection menu will be introduced in a later release. Just tap on the app to start processing and wait for the audio feedback. Once the app is highly confident in its decisions, results are immediately displayed on the screen and spoken out loud. </p>
+							<p class="intro">To help you aim the device properly, LetSee also gives you audio hints about where to move the camera.</p>
+						-->
+							<p class="intro lan-en">LetSee is exploiting the immense computational and sensory capabilities of smartphones.</p>
+							<p class="intro lan-hu">A LetSee sokoldalúan használja ki az okostelefonok számítási teljesítményét és a bennük lévő szenzorokat.</p>
 						</div>
+						<div class="space"></div>
+						<div class="row">
 
-						<form>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="InputEmail1"><span class="lan-en">Email address</span><span class="lan-hu">E-mail cím</span></label>
-										<input type="email" name="input-email" class="form-control" id="InputEmail1" placeholder="Enter email">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="InputName1"><span class="lan-en">Your name</span><span class="lan-hu">Név</span></label>
-										<input type="text" name="input-name" class="form-control" id="InputName1" placeholder="Enter name">
-									</div>
-								</div>
+							<div class="col-md-3 col-sm-6 service">
+								<i class="fa fa-video-camera"></i>
+								<h4 class="lan-en"><strong>Image Acquisition</strong></h4>
+								<h4 class="lan-hu"><strong>Bemeneti képek</strong></h4>
+								<p class="justified lan-en">LetSee uses the built in camera of your smartphone to look around in your surroundings processing each frame continuously. </p>
+								<p class="justified lan-hu">A LetSee a telefon kameráját használja, folyamatosan feldolgozva a környezetből kinyerhető képi információkat.</p>
 							</div>
 
-							<div class="form-group" id="cf-message-fg">
-								<label for="InputMessage"><span class="lan-en">Message</span><span class="lan-hu">Üzenet</span></label>
-								<textarea name="input-message" class="form-control" id="InputMessage" rows="3"></textarea>
+							<div class="col-md-3 col-sm-6 service">
+								<i class="fa fa-mobile"></i>
+								<h4 class="lan-en"><strong>Effective Processing</strong></h4>
+								<h4 class="lan-hu"><strong>Hatékony képfeldolgozás</strong></h4>
+								<p class="justified lan-en">Fast and low-power algorithms running locally on your phone, thus no data connection is needed to use the app.</p>
+								<p class="justified lan-hu">A telefon gyors és hatékony algoritmusok segítségével dolgozza fel a képeket, így nincs szükség internetkapcsolatra az alkalmazás használatához.</p>
 							</div>
 
-							<button type="button" class="btn tf-btn btn-default" id="contactform-submit"><span class="lan-en">Submit</span><span class="lan-hu">Elküld</span></button>
-						</form>
-
+							<div class="col-md-3 col-sm-6 service">
+								<i class="fa fa-bullhorn"></i>
+								<h4 class="lan-en"><strong>Audio Feedback</strong></h4>
+								<h4 class="lan-hu"><strong>Hangjelzések</strong></h4>
+								<p class="justified lan-en">Once the app is highly confident in its decisions, results are immediately displayed on the screen and spoken out loud.</p>
+								<p class="justified lan-hu">Amint az alkalmazás sikeresen feldolgozta a képet, az eredmény azonnal megjelenik a kijelzőn, és hallhatóvá válik a hangszórón vagy fülhallgatón keresztül.</p>
+							</div>
+							<div class="col-md-3 col-sm-6 service">
+								<i class="fa fa-th-list"></i>
+								<h4 class="lan-en"><strong>Task Selection</strong></h4>
+								<h4 class="lan-hu"><strong>Feladatválasztás</strong></h4>
+								<p class="justified lan-en">Simply swipe sideways to choose among functions.</p>
+								<p class="justified lan-hu">A funkciók között egyszerű oldalirányú söpréssel lehet váltani.</p>
+							</div>
+						</div>
 					</div>
 				</div>
-
 			</div>
-		</div>
-		<!-- Our Partners Section
-		==========================================-->
-		<div id="tf-partners" class="text-center">
-			<div class="overlay">
+
+
+			<!--Videos Section
+			==========================================-->
+			<div id="tf-news" class="text-center">
 				<div class="container">
 
-					<div class="section-title center" id="section-title-partners" tabindex="0">
-						<h2 class="lan-en">Our partners</h2>
-						<h2 class="lan-hu">Partnereink</h2>
-						<div class="line">
-							<hr>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="section-title center" id="section-title-news" tabindex="0">
+								<h2 class="lan-en text-center">Technology demonstration videos</h2>
+								<h2 class="lan-hu text-center">Technológia bemutató videók</h2>
+								<div class="line">
+									<hr>
+								</div>
+								<div class="clearfix"></div>
+							</div>
 						</div>
 					</div>
-					<div class="row partnerimages">
-						<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 col-1-6b">
-							<a class="lan-en" href="http://kibu.hu/en/home" target=_blank>
-								<img aria-hidden="true" src="img/partners/300_KiBu_S_Trans_Clip_invert.png" title="Kitchen Budapest" style="width: 60%; max-width: 125px;">
-							</a>
-							<a class="lan-hu" href="http://kibu.hu/hu/home" target=_blank>
-								<img aria-hidden="true" src="img/partners/300_KiBu_S_Trans_Clip_invert.png" title="Kitchen Budapest" style="width: 60%; max-width: 125px;">
-							</a>
+					<div class="row"><div class="col-md-12"><hr></div></div>
+					<div class="row">
+						<div class="col-md-6">
+							<iframe align="middle" style="width: 576px; height: 324px; max-width: 100%; max-height: 60%;" src="https://www.youtube.com/embed/_nKTGo410j0" frameborder="0" gesture="media" allowfullscreen></iframe>
 						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-1-6b">
-							<a class="lan-en" href="https://www.nd.edu" target=_blank>
-								<img aria-hidden="true" src="img/partners/nd_mark_blue_m.png" title="University of Notre Dame">
-							</a>
-							<a class="lan-hu" href="https://www.nd.edu" target=_blank>
-								<img aria-hidden="true" src="img/partners/nd_mark_blue_m.png" title="University of Notre Dame">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-1-6b">
-							<a class="lan-en" href="https://itk.ppke.hu/en" target=_blank>
-								<img src="img/partners/ppkeitk.png" title="Pázmány Péter Catholic University | Faculty of Information Technology and Bionics" alt="Pázmány Péter Catholic University | Faculty of Information Technology and Bionics" style="width: 100%; max-width: 250px; ">
-							</a>
-							<a class="lan-hu" href="https://itk.ppke.hu" target=_blank>
-								<img src="img/partners/ppkeitk.png" title="Pázmány Péter Katolikus Egyetem | Információs Technológiai és Bionikai Kar" alt="Pázmány Péter Katolikus Egyetem | Információs Technológiai és Bionikai Kar" style="width: 100%; max-width: 250px; ">
-							</a>
-						</div>
-						<div class="col-lg-1 col-md-2 col-sm-6 col-xs-12 col-1-6b">
-							<a class="lan-en" href="https://www.mvgyosz.hu/en/mvgyosz-mainpage" target=_blank>
-								<img aria-hidden="true" src="img/partners/mvgyosz_logo_betuszavas.jpg" title="Hungarian Federation of the Blind and Partially Sighted" style="width: 40%; max-width: 80px;">
-							</a>
-							<a class="lan-hu" href="https://www.mvgyosz.hu" target=_blank>
-								<img aria-hidden="true" src="img/partners/mvgyosz_logo_betuszavas.jpg" title="Magyar Vakok és Gyengénlátók Országos Szövetsége" style="width: 40%; max-width: 80px;">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-1-6b">
-							<a class="lan-en" href="https://infoalap.hu/english" target=_blank>
-								<img src="img/partners/infoalap_logo2016HUN_ENG.png" title="IT Foundation for the Visually Impaired" alt="IT Foundation for the Visually Impaired">
-							</a>
-							<a class="lan-hu" href="https://infoalap.hu" target=_blank>
-								<img src="img/partners/infoalap_logo2016HUN_ENG.png" title="Informatika a Látássérültekért Alapítvány" alt="Informatika a Látássérültekért Alapítvány">
-							</a>
-						</div>
-						<div class="col-lg-1 col-md-2 col-sm-6 col-xs-12 col-1-6b">
-							<a class="lan-en" href="https://semmelweis.hu/english" target=_blank>
-								<img src="img/partners/sote-cimer.png" title="Semmelweis Medicine and Health Sciences University" alt="Semmelweis Medicine and Health Sciences University">
-							</a>
-							<a class="lan-hu" href="https://semmelweis.hu" target=_blank>
-								<img src="img/partners/sote-cimer.png" title="Semmelweis Orvostudományi Egyetem" alt="Semmelweis Orvostudományi Egyetem">
-							</a>
+						<div class="col-md-6">
+							<iframe align="middle" style="width: 576px; height: 324px; max-width: 100%; max-height: 60%;" src="https://www.youtube.com/embed/9Y_S-QLQhrY" frameborder="0" gesture="media" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div> <!--end main section-->
 
-	<footer id="footer-section">
-		<nav id="footer">
-			<div class="container" style="display: flex; align-items: center; min-height: 80px;">
-				<div class="pull-left fnav" style="flex: 1;">
-					<p><a href="/privacy" target="_blank" title="Privacy">Privacy Policy of LetSee</a></p>
-					<p>ALL RIGHTS RESERVED. COPYRIGHT © 2025.</p>
-					<p>Original <a href="https://dribbble.com/shots/1907471-Freebie-Spirit8-HTML-Template" target=_blank title="Spirit8 HTML Template on Dribbble">template</a> was designed by <a href="https://dribbble.com/robertbrk" target=_blank title="Robert Berki on Dribbble">Robert Berki</a> and coded by <a href="https://dribbble.com/jennpereira" target=_blank title="Jenn Pereira on Dribbble">Jenn Pereira</a></p>
-				</div>
-				<div class="pull-right fnav" style="flex-shrink: 0;">
-					<ul class="footer-social">
-						<li style="margin: 0 20px;"><a href="https://www.facebook.com/letseeapp/"><i class="fa fa-facebook fa-3x"></i></a></li>
-						<li style="margin: 0 20px;"><a href="https://www.linkedin.com/company/letseeapp/"><i class="fa fa-linkedin fa-3x"></i></a></li>
-						<li style="margin: 0 20px;"><a href="https://www.youtube.com/@letseeapp"><i class="fa fa-youtube fa-3x"></i></a></li>
-					</ul>
+			<!-- News Section
+			==========================================-->
+
+			<div id="tf-news" class="text-center">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="section-title center" id="section-title-news" tabindex="0">
+								<h2 class="lan-en">Media appearances & Resources</h2>
+								<h2 class="lan-hu">Média megjelenések és Információk</h2>
+								<div class="line">
+									<hr>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="row">
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Videos showcasing LetSee App features</h5>
+							<h5 class="lan-hu">A LetSee App funkcióit bemutató videók</h5>
+
+							<p class="intro justified lan-en">
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=SKtf6zBaPmE">Short demo of the banknote recognizer on the phone</a><br>
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=bMmVhpwVa">Short demo of the color recognizer on the phone</a><br>
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=EcfzB9i2I90">Short demo of the 3D, indoor scene understanding</a>
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=YpkPGnlyEJ4">LetSee,an app to help the visually impaired</a> (in Hungarian)
+							</p>
+
+							<p class="intro justified lan-hu">
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=SKtf6zBaPmE">Bankjegyfelismerő funkció bemutatása, a telefonon</a><br>
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=bMmVhpwVa">Színfelismerő funkció bemutatása, a telefonon</a><br>
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=EcfzB9i2I90">3D beltéri jelenet értés bemutatása</a>
+								<span>&#8226;</span> <a href="https://www.youtube.com/watch?v=YpkPGnlyEJ4">LetSee látássegítő applikáció</a>
+							</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Download links & Features</h5>
+							<h5 class="lan-hu">Applikáció letöltési linkek és funkciók</h5>
+
+							<p class="intro justified lan-en">
+								<strong>Download:</strong>
+								<a href="https://play.google.com/store/apps/details?id=com.letseeapp.letseeapp&hl=hu">Google Play</a> <span>&#124;</span>
+								<a href="https://apps.apple.com/by/app/letseeapp/id1170643143">App Store</a><br><br>
+								<strong>Features available in the downloadable app:</strong> banknote recognition (HUF, EUR, USD free), card recognition (free for up to 5 cards), and a brightness meter.
+							</p>
+
+							<p class="intro justified lan-hu">
+								<strong>Letöltés:</strong>
+								<a href="https://play.google.com/store/apps/details?id=com.letseeapp.letseeapp&hl=hu">Google Play</a> <span>&#124;</span>
+								<a href="https://apps.apple.com/by/app/letseeapp/id1170643143">App Store</a><br><br>
+								<strong>A letölthető applikációban elérhető funkciók:</strong> bankjegyfelismerés (HUF, EUR, USD ingyenes), kártyafelismerés (5 kártyáig ingyenes), fényerősség mérő.
+							</p>
+						</div>
+
+					</div>
+				-->
+
+					<div class="row"><div class="col-md-12"><hr></div></div>
+					<div class="row">
+
+						<div class="col-md-12">
+							<h5 class="lan-en">One Digital Award</h5>
+							<h5 class="lan-hu">One Digitális Díj</h5>
+							<p class="intro justified lan-en">
+								December 15, 2025 <span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/masodik-helyezest-ert-el-a-letsee-app-a-one-digitalis-dijon">The LetSee App won second place at the ONE Digital Award! </a> (in Hungarian) <br>
+								December 15, 2025 <span>&#8226;</span> <a href="https://onealapitvany.hu/programok/digitalis-dij">Digital Award </a> (in Hungarian)
+							</p>
+							<p class="intro justified lan-hu">
+								2025. december 15. <span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/masodik-helyezest-ert-el-a-letsee-app-a-one-digitalis-dijon">Második helyezést ért el a LetSee App a ONE Digitális Díjon!</a> <br>
+								2025. december 15. <span>&#8226;</span> <a href="https://onealapitvany.hu/programok/digitalis-dij">Digitális Díj</a>
+
+							</p>
+						</div>
+
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Hobby Radio (LESEK conference)</h5>
+							<h5 class="lan-hu">Hobby Rádió (LESEK konferencia)</h5>
+
+							<p class="intro justified lan-en">
+								November 15, 2025 <span>&#8226;</span>
+								<a href="https://fecni.backbone.itk.ppke.hu/s/yk6T6WXzwTQiRM9">
+									Interview about the LetSee App </a>(in Hungarian)
+
+								<br>
+								November 15, 2025 <span>&#8226;</span>
+								<a href="https://fecni.backbone.itk.ppke.hu/s/4iYdTCTePfDDxTJ">
+									Demonstration of features (color recognizer, doorbell, finding empty seats) </a>(in Hungarian)
+
+							</p>
+
+							<p class="intro justified lan-hu">
+								2025. november 15. <span>&#8226;</span>
+								<a href="https://fecni.backbone.itk.ppke.hu/s/yk6T6WXzwTQiRM9">
+									Általános interjú a LetSee App-ról
+								</a>
+								<br>
+								2025. november 15. <span>&#8226;</span>
+								<a href="https://fecni.backbone.itk.ppke.hu/s/4iYdTCTePfDDxTJ">
+									Funkciók bemutatása (színfelismerő, kapucsengő, üres ülőhelyek keresése)
+								</a>
+							</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">M1 "Esély"</h5>
+							<h5 class="lan-hu">M1 Esély</h5>
+							<p class="intro justified lan-en">April 19, 2025 <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/xGZrLCDwgArMKRj">LetSee App: mobil-phone based vision for the visually impaired</a> (in Hungarian)</p>
+							<p class="intro justified lan-hu">2025. április 19. <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/xGZrLCDwgArMKRj">Bemutatkozik a LetSee App: gépi látás a látássérültekért</a></p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en"> Innoteka </h5>
+							<h5 class="lan-hu">Innotéka</h5>
+							<p class="intro justified lan-en">
+								December 4, 2024 <span>&#8226;</span> <a href="https://www.innoteka.hu/cikk/bionika_az_ember_szolgalataban_mernoki_megoldasok_biologiai_es_orvosi_tapasztalatokra_alapozva.3086.html"> Bionics in the Service of Humanity – Engineering Solutions Based on Biological and Medical Experience</a> (in Hungarian) </p>
+							<p class="intro justified lan-hu">
+								2024. december 04. <span>&#8226;</span> <a href="https://www.innoteka.hu/cikk/bionika_az_ember_szolgalataban_mernoki_megoldasok_biologiai_es_orvosi_tapasztalatokra_alapozva.3086.html">Bionika az ember szolgálatában – mérnöki megoldások biológiai és orvosi tapasztalatokra alapozva</a></p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">TOP100 Media: TOP100 Artifial Intelligence Innovation (2025)</h5>
+							<h5 class="lan-hu">TOP100 Media: TOP100 Mesterséges Intelligencia Innováció (2025)</h5>
+							<p class="intro justified lan-en">
+								<span>&#8226;</span> <a href="https://top-100.hu/100-magyar-mesterseges-intelligencia-innovacio/">TOP 100 Hungarian AI Innovation</a> (in Hungarian)</p>
+							<p class="intro justified lan-hu">
+								<span>&#8226;</span> <a href="https://top-100.hu/100-magyar-mesterseges-intelligencia-innovacio/">TOP 100 Magyar Mesterséges Intelligencia Innováció</a></p>
+						</div>
+
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Cybathlon 2024</h5>
+							<h5 class="lan-hu">Cybathlon 2024</h5>
+							<p class="intro justified lan-en">
+								<span>&#8226;</span> <a href="https://cybathlon.com/en/cybathlon-2024/results?event=5267&discipline=5154">Cybathlon 2024: Results</a><br>
+								<span>&#8226;</span> <a href="https://itk.ppke.hu/en/about-us-253/cybathlon-2024">PPKE ITK: Outstanding Achievements at CYBATHLON</a><br>
+								<span>&#8226;</span> <a href="https://www.magyarkurir.hu/hirek/pazmanyos-gyozelem-fogyatekkal-elok-eletminosegenek-javitasat-celzo-nemzetkozi-cybathlonon">Magyar Kurír: Pázmány victory at the international Cybathlon</a> (in Hungarian) <br>
+								<span>&#8226;</span> <a href="https://startuponline.hu/public/a-fogyatekkal-eloket-segito-megoldasokkal-nyertek-nemzetkozi-versenyt-magyarok">Hungarians won an international competition with solutions that assist people with disabilities</a> (in Hungarian) <br>
+								<span>&#8226;</span> <a href="https://medicalonline.hu/tudomany/cikk/magyar_csapat_nyert_a_svajci_cybathlon_versenyen">Magyar csapat nyert a svájci CYBATHLON versenyen</a> (in Hungarian) <br>
+								<span>&#8226;</span> <a href="https://bdpst24.hu/2024/11/11/a-pazmany-peter-katolikus-egyetem-eyerider-csapata-nyerte-a-latassegito-eszkozoket-fejlesztok-nemzetkozi-versenyet/">The EyeRider team of Pázmány Péter Katolikus Egyetem won the international competition for developers of vision-assisting devices</a> (in Hungarian) <br>
+								<span>&#8226;</span> <a href="https://medicalonline.hu/tudomany/cikk/magyar_csapat_nyert_a_svajci_cybathlon_versenyen">A Hungarian team won the Swiss CYBATHLON competition</a> (in Hungarian) <br>
+								<span>&#8226;</span> <a href="https://hirek.prim.hu/cikk/159195">Hungarian success at the international competition for developers of vision-assisting devices </a> (in Hungarian) <br>
+								<span>&#8226;</span> <a href="https://www.inf.elte.hu/magyar-siker-nemzetkozi-versenyen">Hungarian success at an international competition </a> (in Hungarian) <br>
+								<span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/kimagaslo-eredmenyek-a-cybathlon-on">Success of PPKE ITK on Cybathlon</a> (in Hungarian)
+
+							</p>
+							<p class="intro justified lan-hu">
+								<span>&#8226;</span> <a href="https://cybathlon.com/en/cybathlon-2024/results?event=5267&discipline=5154">Cybathlon 2024: Eredmények</a> (angolul) <br>
+								<span>&#8226;</span> <a href="https://itk.ppke.hu/en/about-us-253/cybathlon-2024">PPKE ITK beszámoló: Cybathlon 2024</a> (angolul) <br>
+								<span>&#8226;</span> <a href="https://www.magyarkurir.hu/hirek/pazmanyos-gyozelem-fogyatekkal-elok-eletminosegenek-javitasat-celzo-nemzetkozi-cybathlonon">Magyar Kurír: Pázmányos győzelem a nemzetközi Cybathlonon</a> <br>
+								<span>&#8226;</span> <a href="https://startuponline.hu/public/a-fogyatekkal-eloket-segito-megoldasokkal-nyertek-nemzetkozi-versenyt-magyarok">A fogyatékkal élőket segítő megoldásokkal nyertek nemzetközi versenyt magyarok</a> <br>
+								<span>&#8226;</span> <a href="https://bdpst24.hu/2024/11/11/a-pazmany-peter-katolikus-egyetem-eyerider-csapata-nyerte-a-latassegito-eszkozoket-fejlesztok-nemzetkozi-versenyet/">A Pázmány Péter Katolikus Egyetem EyeRider csapata nyerte a látássegítő eszközöket fejlesztők nemzetközi versenyét</a> <br>
+								<span>&#8226;</span> <a href="https://medicalonline.hu/tudomany/cikk/magyar_csapat_nyert_a_svajci_cybathlon_versenyen"> Magyar csapat nyert a svájci CYBATHLON versenyen</a> <br>
+								<span>&#8226;</span> <a href="https://hirek.prim.hu/cikk/159195">Magyar siker a látássegítő eszközöket fejlesztők nemzetközi versenyén</a> <br>
+								<span>&#8226;</span> <a href="https://www.inf.elte.hu/magyar-siker-nemzetkozi-versenyen">Magyar siker nemzetközi versenyen</a> <br>
+								<span>&#8226;</span> <a href="https://itk.ppke.hu/kari-hirek/kimagaslo-eredmenyek-a-cybathlon-on">ITK-s sikerek a Cybathlon-on</a>
+
+							</p>
+						</div>
+
+
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Blikk</h5>
+							<h5 class="lan-hu">Blikk</h5>
+							<p class="intro justified lan-en">
+								November 22, 2024 <span>&#8226;</span> <a href="https://www.blikk.hu/ferfiaknak/tech/cybathlon-magyarok-letseeapp/90kmmgs">Hungarians introduce an everyday application designed for the blind </a> (in Hungarian)
+							</p>
+							<p class="intro justified lan-hu">
+								2024. november  22. <span>&#8226;</span> <a href="https://www.blikk.hu/ferfiaknak/tech/cybathlon-magyarok-letseeapp/90kmmgs">Vakoknak készült hétköznapi alkalmazással magyarok a világ előtt</a>
+							</p>
+						</div>
+
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Rehab Portál</h5>
+							<h5 class="lan-hu">Rehab Portál</h5>
+							<p class="intro justified lan-en">
+								August 24, 2024 <span>&#8226;</span> <a href="https://rehabportal.hu/hogyan-segithet-a-mesterseges-intelligencia-a-latasserult-embereknek/">How can Artificial Intelligence help blind people? </a> (in Hungarian)
+							</p>
+							<p class="intro justified lan-hu">
+								2024. augusztus  24. <span>&#8226;</span> <a href="https://rehabportal.hu/hogyan-segithet-a-mesterseges-intelligencia-a-latasserult-embereknek/">Hogyan segíthet a mesterséges intelligencia a látássérült embereknek?</a>
+							</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Cybathlon Introduction Video</h5>
+							<h5 class="lan-hu">Cybathlon Bemutatkozó Videó</h5>
+							<p class="intro justified lan-en">2024 <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/z4PDjMBMBepY3iX">About us for Cybathlon</a> </p>
+							<p class="intro justified lan-hu">2024. <span>&#8226;</span> <a href="https://fecni.backbone.itk.ppke.hu/s/z4PDjMBMBepY3iX">Rólunk - Cybathlon bemutatkozás</a> (angolul)</p>
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Hungarian Federation of the Blind and Partially Sighted</h5>
+							<h5 class="lan-hu">Magyar Vakok és Gyengénlátók Országos Szövetsége</h5>
+							<p class="intro justified lan-en">February 4, 2022 <span>&#8226;</span> <a href="https://www.mvgyosz.hu/hirek-hu/lezarult-a-tavszem-letseeapp-kerdoives-kutatas/">The questionare based researh has been concluded (Távszem-LetSeeApp)</a> (in Hungarian)</p>
+							<p class="intro justified lan-hu">2022. február 4. <span>&#8226;</span> <a href="https://www.mvgyosz.hu/hirek-hu/lezarult-a-tavszem-letseeapp-kerdoives-kutatas/">Lezárult a Távszem-Letseeapp kérdőíves kutatás</a></p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Radio Hobby</h5>
+							<h5 class="lan-hu">Hobby rádió</h5>
+
+							<p class="intro justified lan-en">
+								January 14, 2022 <span>&#8226;</span>
+								<a href="http://gephaz.hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-beszelgettunk/">
+									Interview in Radio Hobby</a> (in Hungarian)
+								<span>&#8226;</span>
+								<a href="http://gephaz.hobbyradio.hu/archiv/22_01_14.mp3">mp3</a> <br>
+								January 15, 2022 <span>&#8226;</span>
+								<a href="https://hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-a-gephazban/">
+									About the future plans of LetSeeApp and MVGYOSZ in GÉPHÁZ</a> (in Hungarian)
+							</p>
+
+							<p class="intro justified lan-hu">
+								2022. január 14. <span>&#8226;</span>
+								<a href="http://gephaz.hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-beszelgettunk/">
+									Interjú a Hobby rádióban</a>
+								<span>&#8226;</span>
+								<a href="http://gephaz.hobbyradio.hu/archiv/22_01_14.mp3">mp3</a> <br>
+								2022. január 15. <span>&#8226;</span>
+								<a href="https://hobbyradio.hu/a-letseeapp-es-az-mvgyosz-jovobeni-terveirol-a-gephazban/">
+									A LetSeeApp és az MVGYOSZ jövőbeni terveiről GÉPHÁZ-ban</a>
+
+							</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Hungarian Federation of the Blind and Partially Sighted</h5>
+							<h5 class="lan-hu">Magyar Vakok és Gyengénlátók Országos Szövetsége</h5>
+							<p class="intro justified lan-en">January 5, 2022 <span>&#8226;</span> <a href="https://www.mvgyosz.hu/kiemelt-hirek-esemenyek/felhivas-a-tavszem-es-letseeapp-felhasznalok-reszere/">Announcement for Távszem and Letseeapp users</a> (in Hungarian)</p>
+							<p class="intro justified lan-hu">2022. január 5. <span>&#8226;</span> <a href="https://www.mvgyosz.hu/kiemelt-hirek-esemenyek/felhivas-a-tavszem-es-letseeapp-felhasznalok-reszere/">Felhívás a Távszem és Letseeapp felhasználók részére</a></p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">vision High-Tech</h5>
+							<h5 class="lan-hu">vision High-Tech</h5>
+							<p class="intro justified lan-en">December 9, 2021 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=O-6ZflOcwgI">LetseeApp iOS Android: accessible application for blind and visually impaired people top application</a> (in French)</p>
+							<p class="intro justified lan-hu">2021. december 9. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=O-6ZflOcwgI">LetseeApp iOS-re és Android-ra: Kiváló alkalmazás vak és gyengénlátók számára</a> (franciául)</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">PsychoVan (by Vanessa)</h5>
+							<h5 class="lan-hu">PsychoVan (Vanessa)</h5>
+							<p class="intro justified lan-en">2020 <span>&#8226;</span> <a href="https://psicovan.es/aplicaciones-accesibles/discapacidad-visual/740-letseeapp-reconoce-tus-billetes-con-la-camara-del-movil">LetSeeApp recognizes your banknotes with the mobile camera</a> (in Spanish)</p>
+							<p class="intro justified lan-hu">2020. <span>&#8226;</span> <a href="https://psicovan.es/aplicaciones-accesibles/discapacidad-visual/740-letseeapp-reconoce-tus-billetes-con-la-camara-del-movil">A LetSeeApp felismeri a bankjegyeit a mobil kamerával</a> (spanyolul)</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">vision High-Tech</h5>
+							<h5 class="lan-hu">vision High-Tech</h5>
+							<p class="intro justified lan-en">June 19, 2020 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=Wo8NycagyMA">LetSeeApp Compatible iOS iPhone Android This Application Detects Light Tickets For Free!</a> (in French)</p>
+							<p class="intro justified lan-hu">2020. június 19. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=Wo8NycagyMA">Egy újabb látássegítő alkalmazás látássérülteknek</a> (franciául)</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Androidphoria (by Peter Reyes)</h5>
+							<h5 class="lan-hu">Androidphoria (Peter Reyes)</h5>
+							<p class="intro justified lan-en">June 12, 2020 <span>&#8226;</span> <a href="https://androidphoria.com/aplicaciones/letseeapp">LetSeeApp helps you identify banknotes with your mobile</a> (in Spanish)</p>
+							<p class="intro justified lan-hu">2020. június 12. <span>&#8226;</span> <a href="https://androidphoria.com/aplicaciones/letseeapp">A LetSeeApp a mobiltelefonja kamerájával segít a bankjegyek felismerésében</a> (spanyolul)</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">smartja.no</h5>
+							<h5 class="lan-hu">smartja.no</h5>
+							<p class="intro justified lan-en">May 20, 2020 <span>&#8226;</span> <a href="https://www.smartja.no/letseeapp/">Another visual aid app for the visually impaired</a> - short description (in Norwegian)</p>
+							<p class="intro justified lan-hu">2020. május 20. <span>&#8226;</span> <a href="https://www.smartja.no/letseeapp/">Egy újabb látássegítő alkalmazás látássérülteknek</a> - rövid ismertető (norvégul)</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Prasad Tech Vision</h5>
+							<h5 class="lan-hu">Prasad Tech Vision</h5>
+							<p class="intro justified lan-en">January 13, 2020 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=H_AXtLrV4uM">How to check dark mode and light mode blind and visually impaired very useful for100 percent blind</a> (in Hindi)</p>
+							<p class="intro justified lan-hu">2020. január 13. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=H_AXtLrV4uM">Fénymérő alkalmazás vakok részére</a> (hindiül)</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Radio Hobby</h5>
+							<h5 class="lan-hu">Hobby rádió</h5>
+							<p class="intro justified lan-en">June 10, 2019 <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/ket-igen-hasznos-magyar-fejlesztesu-okostelefonos-appot-mustraltunk/">Interview in Radio Hobby</a> (in Hungarian) <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/archiv/19_06_07.mp3">mp3</a> </p>
+							<p class="intro justified lan-hu">2019. június 10. <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/ket-igen-hasznos-magyar-fejlesztesu-okostelefonos-appot-mustraltunk/">Interjú a Hobby rádióban</a> <span>&#8226;</span> <a href="http://gephaz.hobbyradio.hu/archiv/19_06_07.mp3">mp3</a> </p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">Blind Coin Collector (Tom Babinszki)</h5>
+							<h5 class="lan-hu">Blind Coin Collector (Tom Babinszki)</h5>
+							<p class="intro justified lan-en">March 10, 2019 <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=tIBPaJeN6u0">How blind people identify paper money</a></p>
+							<p class="intro justified lan-hu">2019. március 10. <span>&#8226;</span> <a href="https://www.youtube.com/watch?v=tIBPaJeN6u0">Így azonosítják a papírpénzeket a látássérültek</a> (angolul)</p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">efiportal.hu</h5>
+							<h5 class="lan-hu">efiportal.hu</h5>
+							<p class="intro justified lan-en">January 31, 2019 <span>&#8226;</span> <a href="http://www.efiportal.hu/hir/okostelefon-alkalmazas-latasserult-felhasznalok-szamara/">Smartphone application for visually impaired users</a> (in Hungarian)</p>
+							<p class="intro justified lan-hu">2019. január 31. <span>&#8226;</span> <a href="http://www.efiportal.hu/hir/okostelefon-alkalmazas-latasserult-felhasznalok-szamara/">Okostelefon-alkalmazás látássérült felhasználók számára</a></p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">mmonline.hu</h5>
+							<h5 class="lan-hu">mmonline.hu</h5>
+							<p class="intro justified lan-en">October 24, 2018 <span>&#8226;</span> <a href="https://mmonline.hu/cikk/magyar-app-segithet-a-latasserulteknek">Hungarian app can help the the blind and visually impaired</a> (in Hungarian)</p>
+							<p class="intro justified lan-hu">2018. október 24. <span>&#8226;</span> <a href="https://mmonline.hu/cikk/magyar-app-segithet-a-latasserulteknek/">Magyar app segíthet a látássérülteknek</a></p>
+						</div>
+
+						<div class="col-md-12">
+							<h5 class="lan-en">IT Foundation for the Visually Impaired</h5>
+							<h5 class="lan-hu">Informatika A Látássérültekért Alapítvány</h5>
+							<p class="intro justified lan-en">
+								July 06, 2017 <span>&#8226;</span> <a href="https://infoalap.hu/Uj-penzfelismero-alkalmazas-segiti-a-vak-embereket-7012/">A new money recognition application helps blind people </a> (in Hungarian)
+							</p>
+							<p class="intro justified lan-hu">
+								2017. július 06. <span>&#8226;</span> <a href="https://infoalap.hu/Uj-penzfelismero-alkalmazas-segiti-a-vak-embereket-7012/">Új pénzfelismerő alkalmazás segíti a vak embereket</a>
+							</p>
+						</div>
+
+					</div>
 				</div>
 			</div>
-		</nav>
-	</footer>
+
+			<!-- Team Page
+			==========================================-->
+			<div id="tf-team" class="text-center">
+				<div class="overlay">
+					<div class="container">
+						<div class="section-title center" id="section-title-team" tabindex="0">
+							<h2 class="lan-en">Meet <strong>our team</strong></h2>
+							<h2 class="lan-hu">Ismerd meg <strong>munkatársainkat!</strong></h2>
+							<div class="line">
+								<hr>
+							</div>
+						</div>
+
+						<div class="row">
+							<!-- Placeholder to move the 4 images to center -->
+							<div style="width:10%; min-height: 1px; float: left;">
+							</div>
+
+							<div class="col-1-4-squished">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/vk1.jpg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Viktor Karacs</h3>
+										<h3 class="lan-hu">Karacs Viktor</h3>
+										<p class="lan-en">Business development manager</p>
+										<p class="lan-hu">Üzletfejlesztési menedzser</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-1-4-squished">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/jmm1.jpg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Márton Jusztin</h3>
+										<h3 class="lan-hu">Jusztin Márton</h3>
+										<p class="lan-en">iOS Developer</p>
+										<p class="lan-hu">iOS fejlesztő</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-1-4-squished">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/gha1.jpg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Anna Gelencsér-Horváth</h3>
+										<h3 class="lan-hu">Gelencsér-Horváth Anna</h3>
+										<p class="lan-en">Research Developer</p>
+										<p class="lan-hu">Kutató-fejlesztő</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-1-4-squished">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/kk1.jpg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Kristof Karacs</h3>
+										<h3 class="lan-hu">Karacs Kristóf</h3>
+										<p class="lan-en">Head of Development</p>
+										<p class="lan-hu">Fejlesztési vezető</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+
+							<div class="col-1-5">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/cse1.jpg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Csanad Egervari</h3>
+										<h3 class="lan-hu">Egervári Csanád</h3>
+										<p class="lan-en">Executive Manager</p>
+										<p class="lan-hu">Ügyvezető</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-1-5">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/jj1.jpg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Julian Jeronimo</h3>
+										<h3 class="lan-hu">Jeronimo Julian</h3>
+										<p class="lan-en">Android Developer</p>
+										<p class="lan-hu">Android fejlesztő</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-1-5">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/as1.jpg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Attila Stubendek</h3>
+										<h3 class="lan-hu">Stubendek Attila</h3>
+										<p class="lan-en">Algorithm Developer</p>
+										<p class="lan-hu">Algoritmus-fejlesztő</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-1-5">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/gq1.png" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Gabor Quintz</h3>
+										<h3 class="lan-hu">Quintz Gábor</h3>
+										<p class="lan-en">iOS Developer</p>
+										<p class="lan-hu">iOS fejlesztő</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-1-5">
+								<div class="thumbnail">
+									<img aria-hidden="true" src="img/team/kt.jpeg" class="img-circle team-img">
+									<div class="caption">
+										<h3 class="lan-en">Tibor Kertesz</h3>
+										<h3 class="lan-hu">Kertész Tibor</h3>
+										<p class="lan-en">Mobile App Developer</p>
+										<p class="lan-hu">Mobil App fejlesztő</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact Section
+			==========================================-->
+			<div id="tf-contact" class="text-center">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+
+							<div class="section-title center" id="section-title-contact" tabindex="0">
+								<h2 class="lan-en"><strong>Contact</strong></h2>
+								<h2 class="lan-hu"><strong>Elérhetőség</strong></h2>
+								<div class="line">
+									<hr>
+								</div>
+								<div class="clearfix"></div>
+								<span class="lan-en">
+									<em>Contact us! - in case you have any questions or comments</em><br>
+								</span>
+								<span class="lan-hu">
+									<em>Írj nekünk! - ha bármi kérdésed vagy megjegyzésed van</em><br>
+								</span>
+							</div>
+
+							<form>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="InputEmail1"><span class="lan-en">Email address</span><span class="lan-hu">E-mail cím</span></label>
+											<input type="email" name="input-email" class="form-control" id="InputEmail1" placeholder="Enter email">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="InputName1"><span class="lan-en">Your name</span><span class="lan-hu">Név</span></label>
+											<input type="text" name="input-name" class="form-control" id="InputName1" placeholder="Enter name">
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group" id="cf-message-fg">
+									<label for="InputMessage"><span class="lan-en">Message</span><span class="lan-hu">Üzenet</span></label>
+									<textarea name="input-message" class="form-control" id="InputMessage" rows="3"></textarea>
+								</div>
+
+								<button type="button" class="btn tf-btn btn-default" id="contactform-submit"><span class="lan-en">Submit</span><span class="lan-hu">Elküld</span></button>
+							</form>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- Our Partners Section
+			==========================================-->
+			<div id="tf-partners" class="text-center">
+				<div class="overlay">
+					<div class="container">
+
+						<div class="section-title center" id="section-title-partners" tabindex="0">
+							<h2 class="lan-en">Our partners</h2>
+							<h2 class="lan-hu">Partnereink</h2>
+							<div class="line">
+								<hr>
+							</div>
+						</div>
+						<div class="row partnerimages">
+							<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 col-1-6b">
+								<a class="lan-en" href="http://kibu.hu/en/home" target=_blank>
+									<img aria-hidden="true" src="img/partners/300_KiBu_S_Trans_Clip_invert.png" title="Kitchen Budapest" style="width: 60%; max-width: 125px;">
+								</a>
+								<a class="lan-hu" href="http://kibu.hu/hu/home" target=_blank>
+									<img aria-hidden="true" src="img/partners/300_KiBu_S_Trans_Clip_invert.png" title="Kitchen Budapest" style="width: 60%; max-width: 125px;">
+								</a>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-1-6b">
+								<a class="lan-en" href="https://www.nd.edu" target=_blank>
+									<img aria-hidden="true" src="img/partners/nd_mark_blue_m.png" title="University of Notre Dame">
+								</a>
+								<a class="lan-hu" href="https://www.nd.edu" target=_blank>
+									<img aria-hidden="true" src="img/partners/nd_mark_blue_m.png" title="University of Notre Dame">
+								</a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-1-6b">
+								<a class="lan-en" href="https://itk.ppke.hu/en" target=_blank>
+									<img src="img/partners/ppkeitk.png" title="Pázmány Péter Catholic University | Faculty of Information Technology and Bionics" alt="Pázmány Péter Catholic University | Faculty of Information Technology and Bionics" style="width: 100%; max-width: 250px; ">
+								</a>
+								<a class="lan-hu" href="https://itk.ppke.hu" target=_blank>
+									<img src="img/partners/ppkeitk.png" title="Pázmány Péter Katolikus Egyetem | Információs Technológiai és Bionikai Kar" alt="Pázmány Péter Katolikus Egyetem | Információs Technológiai és Bionikai Kar" style="width: 100%; max-width: 250px; ">
+								</a>
+							</div>
+							<div class="col-lg-1 col-md-2 col-sm-6 col-xs-12 col-1-6b">
+								<a class="lan-en" href="https://www.mvgyosz.hu/en/mvgyosz-mainpage" target=_blank>
+									<img aria-hidden="true" src="img/partners/mvgyosz_logo_betuszavas.jpg" title="Hungarian Federation of the Blind and Partially Sighted" style="width: 40%; max-width: 80px;">
+								</a>
+								<a class="lan-hu" href="https://www.mvgyosz.hu" target=_blank>
+									<img aria-hidden="true" src="img/partners/mvgyosz_logo_betuszavas.jpg" title="Magyar Vakok és Gyengénlátók Országos Szövetsége" style="width: 40%; max-width: 80px;">
+								</a>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-1-6b">
+								<a class="lan-en" href="https://infoalap.hu/english" target=_blank>
+									<img src="img/partners/infoalap_logo2016HUN_ENG.png" title="IT Foundation for the Visually Impaired" alt="IT Foundation for the Visually Impaired">
+								</a>
+								<a class="lan-hu" href="https://infoalap.hu" target=_blank>
+									<img src="img/partners/infoalap_logo2016HUN_ENG.png" title="Informatika a Látássérültekért Alapítvány" alt="Informatika a Látássérültekért Alapítvány">
+								</a>
+							</div>
+							<div class="col-lg-1 col-md-2 col-sm-6 col-xs-12 col-1-6b">
+								<a class="lan-en" href="https://semmelweis.hu/english" target=_blank>
+									<img src="img/partners/sote-cimer.png" title="Semmelweis Medicine and Health Sciences University" alt="Semmelweis Medicine and Health Sciences University">
+								</a>
+								<a class="lan-hu" href="https://semmelweis.hu" target=_blank>
+									<img src="img/partners/sote-cimer.png" title="Semmelweis Orvostudományi Egyetem" alt="Semmelweis Orvostudományi Egyetem">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!--end main section-->
+
+		<footer id="footer-section">
+			<nav id="footer">
+				<div class="container" style="display: flex; align-items: center; min-height: 80px;">
+					<div class="pull-left fnav" style="flex: 1;">
+						<p><a href="/privacy" target="_blank" title="Privacy">Privacy Policy of LetSee</a></p>
+						<p>ALL RIGHTS RESERVED. COPYRIGHT © 2025.</p>
+						<p>Original <a href="https://dribbble.com/shots/1907471-Freebie-Spirit8-HTML-Template" target=_blank title="Spirit8 HTML Template on Dribbble">template</a> was designed by <a href="https://dribbble.com/robertbrk" target=_blank title="Robert Berki on Dribbble">Robert Berki</a> and coded by <a href="https://dribbble.com/jennpereira" target=_blank title="Jenn Pereira on Dribbble">Jenn Pereira</a></p>
+					</div>
+					<div class="pull-right fnav" style="flex-shrink: 0;">
+						<ul class="footer-social">
+							<li style="margin: 0 20px;"><a href="https://www.facebook.com/letseeapp/"><i class="fa fa-facebook fa-3x"></i></a></li>
+							<li style="margin: 0 20px;"><a href="https://www.linkedin.com/company/letseeapp/"><i class="fa fa-linkedin fa-3x"></i></a></li>
+							<li style="margin: 0 20px;"><a href="https://www.youtube.com/@letseeapp"><i class="fa fa-youtube fa-3x"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</footer>
 
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/SmoothScroll.js"></script>
-	<script type="text/javascript" src="js/jquery.isotope.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/SmoothScroll.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.js"></script>
 
-	<script src="js/owl.carousel.js"></script>
-	<script>
-		var link = "v8WauUWZyB3ctJ3bm9yL6MHc0RHa";
-		var padding = "==QbvNmLslWYtdGQwBXYlV2c0VGb";
+		<script src="js/owl.carousel.js"></script>
+		<script>
+			var link = "v8WauUWZyB3ctJ3bm9yL6MHc0RHa";
+			var padding = "==QbvNmLslWYtdGQwBXYlV2c0VGb";
 
-		$('#cf-send-message').change(function(){
+			$('#cf-send-message').change(function(){
 			if($('input[name="cf-send-message"]:checked').val()){
-				$('#cf-message-fg').show("slow");
+			$('#cf-message-fg').show("slow");
 			}
 			else{
-				$('#cf-message-fg').hide("slow");
+			$('#cf-message-fg').hide("slow");
 			}
-		});
-		
-		$('#contactform-submit').click(function() {
+			});
 
-      alert('Thank you for your time!');
+			$('#contactform-submit').click(function() {
 
-      var data = { 
-       Name: $('#InputName1').val(), 
-       Email: $('#InputEmail1').val(),
-       Subscription: "Subscription skipped.",
-       Message: $('#InputMessage').val()
-     };
+			alert('Thank you for your time!');
 
-     $.ajax({
-       url: atob(link.split('').reverse().join('')).concat(atob(padding.split('').reverse().join(''))), 
-       method: "POST",
-       data: data,
-       dataType: "json"
-     });
+			var data = {
+			Name: $('#InputName1').val(),
+			Email: $('#InputEmail1').val(),
+			Subscription: "Subscription skipped.",
+			Message: $('#InputMessage').val()
+			};
 
-     $('#InputMessage').val("");
-     $('#InputName1').val("");
-     $('#InputEmail1').val("");
+			$.ajax({
+			url: atob(link.split('').reverse().join('')).concat(atob(padding.split('').reverse().join(''))),
+			method: "POST",
+			data: data,
+			dataType: "json"
+			});
 
-   });
- </script>
+			$('#InputMessage').val("");
+			$('#InputName1').val("");
+			$('#InputEmail1').val("");
 
-	<!-- Javascripts
-	================================================== -->
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript">
-		var actLan = "en";
-		$(".lan-hu").hide();
-		$("#lan-selector").click(function(event){
+			});
+		</script>
+
+		<!-- Javascripts
+		================================================== -->
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript">
+			var actLan = "en";
+			$(".lan-hu").hide();
+			$("#lan-selector").click(function(event){
 			if(actLan === "hu") {
-				actLan = "en";
-				$(".lan-hu").hide();
-				$(".lan-en").show();
+			actLan = "en";
+			$(".lan-hu").hide();
+			$(".lan-en").show();
 			} else {
-				actLan = "hu";
-				$(".lan-en").hide();
-				$(".lan-hu").show();
+			actLan = "hu";
+			$(".lan-en").hide();
+			$(".lan-hu").show();
 			}
 			event.preventDefault();
-		});
-	</script>
+			});
+		</script>
 
-	<!-- JS function to fix the accessibility focus on keyboard navigation -->
- <script>
-		// On an key pressed event performed over the navigation bar `nav` element with id:
-		// `tf-menu` (the parent element)
-		// Approach 1: Using jQuery for handling the event
-  $("#tf-menu").keyup(function(event) {
-		// Approach 2: Using vanilla JavaScript for handling the event
-		// document.getElementById("tf-menu").addEventListener("keyup", function (event) {
+		<!-- JS function to fix the accessibility focus on keyboard navigation -->
+		<script>
+			// On an key pressed event performed over the navigation bar `nav` element with id:
+			// `tf-menu` (the parent element)
+			// Approach 1: Using jQuery for handling the event
+			$("#tf-menu").keyup(function(event) {
+			// Approach 2: Using vanilla JavaScript for handling the event
+			// document.getElementById("tf-menu").addEventListener("keyup", function (event) {
 			// event.preventDefault(); // Approach 2: Using vanilla JavaScript
 			// If the key pressed event is the 'Enter' key (key code number 13)
-   if (event.key === '13' || event.key === 'Enter') {
-				switch (document.activeElement.id) { // Change the focus to the corresponding section title element
-       case 'navbar-logo': document.getElementById('section-title-home').focus();
-        break;
-      case 'navbar-home': document.getElementById('section-title-home').focus();
-        break;
-      case 'navbar-about': document.getElementById('section-title-about').focus();
-        break;
-      case 'navbar-explore': document.getElementById('section-title-explore').focus();
-        break;
-      case 'navbar-news': document.getElementById('section-title-news').focus();
-        break;
-      case 'navbar-team': document.getElementById('section-title-team').focus();
-        break;
-      case 'navbar-contact': document.getElementById('section-title-contact').focus();
-        break;
-      case 'navbar-partners': document.getElementById('section-title-partners').focus();
-        break;
-      }
-    }
-  });
-</script>
+			if (event.key === '13' || event.key === 'Enter') {
+			switch (document.activeElement.id) { // Change the focus to the corresponding section title element
+			case 'navbar-logo': document.getElementById('section-title-home').focus();
+			break;
+			case 'navbar-home': document.getElementById('section-title-home').focus();
+			break;
+			case 'navbar-about': document.getElementById('section-title-about').focus();
+			break;
+			case 'navbar-explore': document.getElementById('section-title-explore').focus();
+			break;
+			case 'navbar-news': document.getElementById('section-title-news').focus();
+			break;
+			case 'navbar-team': document.getElementById('section-title-team').focus();
+			break;
+			case 'navbar-contact': document.getElementById('section-title-contact').focus();
+			break;
+			case 'navbar-partners': document.getElementById('section-title-partners').focus();
+			break;
+			}
+			}
+			});
+		</script>
 
-</body>
+	</body>
 </html>

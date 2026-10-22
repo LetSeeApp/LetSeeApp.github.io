@@ -84,9 +84,10 @@
 					<ul class="nav navbar-nav navbar-right" id="navbar-sections">
 						<li><a id="navbar-home" href="#tf-home" class="page-scroll"><span class="lan-en">Home</span><span class="lan-hu">Főoldal</span></a></li>
 						<li><a id="navbar-about" href="#tf-about" class="page-scroll"><span class="lan-en">About</span><span class="lan-hu">Az appról</span></a></li>
+						<li><a id="navbar-latest" href="#tf-latest" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
 						<li><a id="navbar-explore" href="#tf-explore" class="page-scroll"><span class="lan-en">Explore</span><span class="lan-hu">Ismertető</span></a></li>
 						<li><a id="navbar-videos" href="#tf-videos" class="page-scroll"><span class="lan-en">Videos</span><span class="lan-hu">Videók</span></a></li>
-						<li><a id="navbar-news" href="#tf-news" class="page-scroll"><span class="lan-en">News</span><span class="lan-hu">Hírek</span></a></li>
+						<li><a id="navbar-news" href="#tf-news" class="page-scroll"><span class="lan-en">Media</span><span class="lan-hu">Média</span></a></li>
 						<li><a id="navbar-team" href="#tf-team" class="page-scroll"><span class="lan-en">Team</span><span class="lan-hu">Csapatunk</span></a></li>
 						<li><a id="navbar-contact" href="#tf-contact" class="page-scroll"><span class="lan-en">Contact</span><span class="lan-hu">Kapcsolat</span></a></li>
 						<li><a id="navbar-partners" href="#tf-partners" class="page-scroll"><span class="lan-en">Partners</span><span class="lan-hu">Partnereink</span></a></li>
@@ -168,6 +169,36 @@
 				</div>
 			</div>
 
+
+			<!-- News Section (latest posts)
+			==========================================-->
+
+			<div id="tf-latest" class="text-center">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="section-title center" id="section-title-latest" tabindex="0">
+								<h2 class="lan-en">News</h2>
+								<h2 class="lan-hu">Hírek</h2>
+								<div class="line">
+									<hr>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row"><div class="col-md-12"><hr></div></div>
+					<div class="row">
+						<div class="col-md-6">
+							<iframe class="latest-post" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7508560747979952128" height="971" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+						</div>
+						<div class="col-md-6">
+							<iframe class="latest-post" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7493636677282865152" height="942" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<!-- Explore Section
 			==========================================-->
@@ -262,7 +293,7 @@
 				</div>
 			</div>
 
-			<!-- News Section
+			<!-- Media Section
 			==========================================-->
 
 			<div id="tf-news" class="text-center">
@@ -950,6 +981,8 @@
 			case 'navbar-about': document.getElementById('section-title-about').focus();
 			break;
 			case 'navbar-explore': document.getElementById('section-title-explore').focus();
+			break;
+			case 'navbar-latest': document.getElementById('section-title-latest').focus();
 			break;
 			case 'navbar-news': document.getElementById('section-title-news').focus();
 			break;

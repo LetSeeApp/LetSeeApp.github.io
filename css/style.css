@@ -242,6 +242,15 @@ ul.about-list li span{
 }
 
 /* News Section */
+#tf-latest {
+	padding: 80px 0;
+}
+#tf-latest .latest-post {
+	width: 100%;
+	max-width: 504px;
+	margin-bottom: 30px;
+}
+
 #tf-news {
 	padding: 80px 0;
 }
